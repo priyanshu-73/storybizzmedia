@@ -6,8 +6,15 @@ import type { PageConfig } from "@/lib/types";
 
 const page = pageData as unknown as PageConfig;
 
+const title = "B2B Companies PR — StoryBizz";
+const description =
+  "For B2B companies and services firms, executive authority and business-media coverage that survive procurement, shorten sales cycles and give your champion something to forward internally.";
+
 export const metadata: Metadata = {
-  title: "B2B Companies PR — StoryBizz",
+  title,
+  description,
+  openGraph: { title, description },
+  twitter: { title, description },
 };
 
 export default function Page() {

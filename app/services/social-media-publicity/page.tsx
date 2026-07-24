@@ -6,8 +6,15 @@ import type { PageConfig } from "@/lib/types";
 
 const page = pageData as unknown as PageConfig;
 
+const title = "Social Media Publicity — StoryBizz";
+const description =
+  "Your story, cut into platform-native content and placed on the Instagram theme pages, creator pages and communities your customers already follow. Familiarity, built where they actually scroll.";
+
 export const metadata: Metadata = {
-  title: "Social Media Publicity — StoryBizz",
+  title,
+  description,
+  openGraph: { title, description },
+  twitter: { title, description },
 };
 
 export default function Page() {

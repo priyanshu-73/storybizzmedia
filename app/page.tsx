@@ -177,7 +177,7 @@ export default function Home() {
             <div className="faces">
               {[1, 2, 3, 4].map((i) => (
                 <div className="face" key={i}>
-                  <ImageSlot placeholder="" />
+                  <ImageSlot src={`/uploads/slots/av-${i}.webp`} placeholder="" />
                 </div>
               ))}
               <div className="face badge">8k+</div>
@@ -398,25 +398,25 @@ export default function Home() {
         <div className="wrap">
           <div className="social-row reveal" style={d(".16s")}>
             <div className="social-card">
-              <ImageSlot shape="rounded" radius={10} placeholder="Reel (9:16)" />
+              <ImageSlot src="/uploads/slots/soc-1.webp" shape="rounded" radius={10} placeholder="Reel (9:16)" />
               <span className="plat">
                 <InstagramIcon />
               </span>
             </div>
             <div className="social-card">
-              <ImageSlot shape="rounded" radius={10} placeholder="Short (9:16)" />
+              <ImageSlot src="/uploads/slots/soc-2.webp" shape="rounded" radius={10} placeholder="Short (9:16)" />
               <span className="plat">
                 <YouTubeIcon />
               </span>
             </div>
             <div className="social-card">
-              <ImageSlot shape="rounded" radius={10} placeholder="Clip (9:16)" />
+              <ImageSlot src="/uploads/slots/soc-3.webp" shape="rounded" radius={10} placeholder="Clip (9:16)" />
               <span className="plat">
                 <LinkedInIcon />
               </span>
             </div>
             <div className="social-card">
-              <ImageSlot shape="rounded" radius={10} placeholder="Feature (9:16)" />
+              <ImageSlot src="/uploads/slots/soc-4.webp" shape="rounded" radius={10} placeholder="Feature (9:16)" />
               <span className="plat">
                 <FacebookIcon />
               </span>
@@ -450,7 +450,7 @@ export default function Home() {
           </div>
           <div className="chapter-visual reveal" style={d(".12s")}>
             <div className="yt-thumb plx" data-plx="16">
-              <ImageSlot placeholder="Podcast episode thumbnail (16:9)" style={{ height: "100%" }} />
+              <ImageSlot src="/uploads/slots/podcast-main.webp" placeholder="Podcast episode thumbnail (16:9)" style={{ height: "100%" }} />
               <span className="yt-play" />
               <span
                 className="dur"
@@ -468,7 +468,7 @@ export default function Home() {
             <div className="clips" style={{ marginTop: 18 }}>
               {["0:38", "0:52", "1:04"].map((dur, i) => (
                 <div className="clip yt-thumb" key={i} style={{ aspectRatio: "16/9" }}>
-                  <ImageSlot placeholder="Clip (16:9)" style={{ height: "100%" }} />
+                  <ImageSlot src={`/uploads/slots/clip-${i + 1}.webp`} placeholder="Clip (16:9)" style={{ height: "100%" }} />
                   <span className="yt-play mini" />
                   <span className="dur">{dur}</span>
                 </div>
@@ -492,7 +492,7 @@ export default function Home() {
           <div className="svc-grid">
             <div className="svc-card reveal" style={d(".06s")}>
               <div className="svc-media">
-                <ImageSlot placeholder="Newspaper feature" style={{ height: "100%" }} />
+                <ImageSlot src="/uploads/slots/newspaper.webp" placeholder="Newspaper feature" style={{ height: "100%" }} />
               </div>
               <div className="svc-body">
                 <div className="svc-title">Print Newspapers</div>
@@ -709,7 +709,7 @@ export default function Home() {
                   <span className="dot" />
                   <span className="dot" />
                 </div>
-                <img src={src} alt={alt} loading="lazy" />
+                <img src={src} alt={alt} />
               </div>
             ))}
           </div>
@@ -723,7 +723,7 @@ export default function Home() {
                   <span className="dot" />
                   <span className="dot" />
                 </div>
-                <img src={src} alt={alt} loading="lazy" />
+                <img src={src} alt={alt} />
               </div>
             ))}
           </div>

@@ -6,8 +6,15 @@ import type { PageConfig } from "@/lib/types";
 
 const page = pageData as unknown as PageConfig;
 
+const title = "Press Releases — StoryBizz";
+const description =
+  "A real news article about your business, written by journalists, carried by national outlets, syndicated to 80–200+ portals and indexed on Google News. So when someone checks you out, they find news, not silence.";
+
 export const metadata: Metadata = {
-  title: "Press Releases — StoryBizz",
+  title,
+  description,
+  openGraph: { title, description },
+  twitter: { title, description },
 };
 
 export default function Page() {

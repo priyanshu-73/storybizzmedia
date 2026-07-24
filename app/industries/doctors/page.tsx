@@ -6,8 +6,15 @@ import type { PageConfig } from "@/lib/types";
 
 const page = pageData as unknown as PageConfig;
 
+const title = "Doctors & Healthcare PR — StoryBizz";
+const description =
+  "For doctors, clinics and hospitals, practitioner profiles, expert commentary and health features that make patients confident before the first consultation.";
+
 export const metadata: Metadata = {
-  title: "Doctors &amp; Healthcare PR — StoryBizz",
+  title,
+  description,
+  openGraph: { title, description },
+  twitter: { title, description },
 };
 
 export default function Page() {

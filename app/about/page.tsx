@@ -6,8 +6,15 @@ import type { PageConfig } from "@/lib/types";
 
 const page = pageData as unknown as PageConfig;
 
+const title = "About Us — StoryBizz";
+const description =
+  "StoryBizz is a media visibility partner. We put founders, brands and professionals in the places where people decide who to trust, press, Google, podcasts, magazines and social feeds.";
+
 export const metadata: Metadata = {
-  title: "About Us — StoryBizz",
+  title,
+  description,
+  openGraph: { title, description },
+  twitter: { title, description },
 };
 
 export default function Page() {

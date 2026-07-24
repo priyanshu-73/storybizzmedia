@@ -1,0 +1,11 @@
+services:
+  storybizz-next:
+    build:
+      context: .
+      args:
+        NEXT_PUBLIC_SITE_URL: https://storybizzmedia.com
+    image: storybizz-next:latest
+    container_name: storybizz-next
+    restart: unless-stopped
+    ports:
+      - "3001:3000"

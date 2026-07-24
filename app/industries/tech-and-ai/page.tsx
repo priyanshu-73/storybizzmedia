@@ -6,8 +6,15 @@ import type { PageConfig } from "@/lib/types";
 
 const page = pageData as unknown as PageConfig;
 
+const title = "Tech & AI PR — StoryBizz";
+const description =
+  "Funding news, product launches and founder stories for startups and AI companies, coverage that convinces investors, enterprise buyers and senior hires that you are the real thing.";
+
 export const metadata: Metadata = {
-  title: "Tech &amp; AI PR — StoryBizz",
+  title,
+  description,
+  openGraph: { title, description },
+  twitter: { title, description },
 };
 
 export default function Page() {

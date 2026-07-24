@@ -6,8 +6,15 @@ import type { PageConfig } from "@/lib/types";
 
 const page = pageData as unknown as PageConfig;
 
+const title = "Real Estate PR — StoryBizz";
+const description =
+  "For developers, brokerages and proptech, project coverage, leadership profiles and legacy stories that make buyers comfortable signing the biggest cheque of their lives.";
+
 export const metadata: Metadata = {
-  title: "Real Estate PR — StoryBizz",
+  title,
+  description,
+  openGraph: { title, description },
+  twitter: { title, description },
 };
 
 export default function Page() {

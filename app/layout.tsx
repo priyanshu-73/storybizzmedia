@@ -1,9 +1,10 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Hanken_Grotesk, Playfair_Display } from "next/font/google";
 import Nav from "@/components/Nav";
 import PrModal from "@/components/PrModal";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import SiteFx from "@/components/SiteFx";
+import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const hanken = Hanken_Grotesk({
@@ -20,10 +21,33 @@ const playfair = Playfair_Display({
   style: ["normal", "italic"],
 });
 
+const title = "StoryBizz — Become impossible to ignore";
+const description =
+  "The media visibility partner. We put your story where people decide who to trust — media, Google, podcasts, magazines and social feeds.";
+
 export const metadata: Metadata = {
-  title: "StoryBizz — Become impossible to ignore",
-  description:
-    "The media visibility partner. We put your story where people decide who to trust — media, Google, podcasts, magazines and social feeds.",
+  metadataBase: new URL(SITE_URL),
+  title: { default: title, template: "%s" },
+  description,
+  openGraph: {
+    title,
+    description,
+    url: SITE_URL,
+    siteName: "StoryBizz",
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#0B0B0C",
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
