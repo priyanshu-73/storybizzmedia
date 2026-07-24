@@ -1,0 +1,89 @@
+{
+  "title": "Careers",
+  "slug": "careers",
+  "hero": {
+    "crumb": "Company / <b>Careers</b>",
+    "titleHtml": "Help great stories <span class=\"em\">get told.</span>",
+    "lede": "We are a small team doing high-leverage work, putting founders and brands on the record across India’s biggest media outlets. If you love stories, media and momentum, you will like it here.",
+    "cta": "Apply now",
+    "shotPh": "Team culture photo",
+    "shotAr": "4/4",
+    "shotTag": "Life at StoryBizz"
+  },
+  "sections": [
+    {
+      "type": "deliver",
+      "label": "Why join",
+      "eyebrow": "Why StoryBizz",
+      "titleHtml": "Work that <span class=\"em\">shows up in print.</span>",
+      "items": [
+        {
+          "icon": "newspaper",
+          "title": "Tangible output",
+          "text": "Your work ends up in Forbes, TOI and on national stages, not in a backlog."
+        },
+        {
+          "icon": "zap",
+          "title": "Small team, real ownership",
+          "text": "You own clients and outcomes from early on. No layers."
+        },
+        {
+          "icon": "graduation-cap",
+          "title": "Learn the media game",
+          "text": "Editors, outlets, shows, awards, you will learn how visibility actually works."
+        }
+      ]
+    },
+    {
+      "type": "roles",
+      "label": "Open roles",
+      "eyebrow": "Open roles",
+      "titleHtml": "Currently <span class=\"em\">hiring for.</span>",
+      "items": [
+        {
+          "title": "PR Account Manager",
+          "dept": "Client Success",
+          "loc": "Hybrid · India"
+        },
+        {
+          "title": "Media Relations Executive",
+          "dept": "Partnerships",
+          "loc": "Remote · India"
+        },
+        {
+          "title": "Content Writer, Features & Press",
+          "dept": "Editorial",
+          "loc": "Remote · India"
+        },
+        {
+          "title": "Business Development Executive",
+          "dept": "Growth",
+          "loc": "Hybrid · India"
+        }
+      ],
+      "note": "Don’t see your role? Write to us anyway, <b>careers@storybizz.com</b>. Good people beat open positions."
+    },
+    {
+      "type": "faq",
+      "titleHtml": "Hiring, <span class=\"em\">answered.</span>",
+      "items": [
+        {
+          "q": "What does the hiring process look like?",
+          "a": "Three steps: a short intro call, a practical assignment relevant to the role, and a final conversation with the founder. Usually done within two weeks."
+        },
+        {
+          "q": "Is remote work okay?",
+          "a": "Most roles are remote or hybrid, we care about output and ownership, not seat time."
+        },
+        {
+          "q": "I am a fresher. Can I apply?",
+          "a": "Yes, media relations and content roles regularly take sharp freshers who can write and follow through."
+        }
+      ]
+    }
+  ],
+  "cta": {
+    "title": "Do the work<br><span class=\"em\">people point at.</span>",
+    "lede": "Apply via the form, tell us the role in the first message."
+  }
+}

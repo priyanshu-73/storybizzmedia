@@ -1,0 +1,56 @@
+{
+  "title": "Contact",
+  "slug": "contact",
+  "hero": {
+    "crumb": "Company / <b>Contact</b>",
+    "titleHtml": "Let’s find where your name <span class=\"em\">should be showing up.</span>",
+    "lede": "Start the 2-minute survey and our media team will come back with a concrete recommendation, or reach us directly below.",
+    "cta": "Start the survey",
+    "shotPh": "Office / team photo",
+    "shotAr": "4/4",
+    "shotTag": "The StoryBizz office"
+  },
+  "sections": [
+    {
+      "type": "contact",
+      "label": "Contact details",
+      "channels": [
+        {
+          "icon": "message-circle",
+          "label": "WhatsApp",
+          "value": "Chat with the media team",
+          "href": "https://wa.me/",
+          "sub": "Fastest response, usually within a few hours"
+        },
+        {
+          "icon": "mail",
+          "label": "Email",
+          "value": "hello@storybizz.com",
+          "href": "mailto:hello@storybizz.com",
+          "sub": "For proposals, partnerships and press"
+        },
+        {
+          "icon": "phone",
+          "label": "Phone",
+          "value": "+91 00000 00000",
+          "href": "tel:+910000000000",
+          "sub": "Mon–Sat, 10am–7pm IST"
+        },
+        {
+          "icon": "map-pin",
+          "label": "Office",
+          "value": "StoryBizz Media",
+          "sub": "Address placeholder, add your office location"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "titleHtml": "Tell us your story.<br><span class=\"em\">We’ll tell you where it belongs.</span>"
+    }
+  ],
+  "cta": {
+    "title": "Prefer answering<br><span class=\"em\">a few questions?</span>",
+    "lede": "The survey takes 2 minutes and gets you a tailored recommendation."
+  }
+}

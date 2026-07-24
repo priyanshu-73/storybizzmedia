@@ -1,0 +1,386 @@
+{
+  "title": "Real Estate PR",
+  "slug": "re",
+  "hero": {
+    "crumb": "Industries / <b>Real Estate</b>",
+    "titleHtml": "Trust is the <span class=\"em\">only currency</span> in real estate.",
+    "lede": "For developers, brokerages and proptech, project coverage, leadership profiles and legacy stories that make buyers comfortable signing the biggest cheque of their lives.",
+    "shot": "/uploads/Screenshot 2026-07-16 at 12.51.36 AM.png",
+    "shotAr": "1026/590",
+    "shotTag": "The Godfather of Bangalore Real Estate · YouTube"
+  },
+  "sections": [
+    {
+      "type": "logoband"
+    },
+    {
+      "type": "proofwall",
+      "eyebrow": "Proof of work",
+      "titleHtml": "Real coverage, real feeds, <span class=\"em\">real first pages.</span>",
+      "items": [
+        {
+          "src": "/uploads/Screenshot 2026-07-16 at 12.51.20 AM.png",
+          "cap": "‘Real estate billionaire’ · Figuring Out with Raj Shamani, 2.1M+ views",
+          "ar": "1022/600"
+        },
+        {
+          "src": "/uploads/Screenshot 2026-07-16 at 12.51.36 AM.png",
+          "cap": "The Godfather of Bangalore Real Estate · YouTube",
+          "ar": "1026/590"
+        },
+        {
+          "src": "/uploads/Screenshot 2026-07-16 at 12.51.52 AM.png",
+          "cap": "Real Estate Prices Will Crash · powered by Groww",
+          "ar": "1008/600"
+        },
+        {
+          "src": "/uploads/Screenshot 2026-07-16 at 12.52.59 AM.png",
+          "cap": "Bhutani Infra · CEOs of Bharat, Instagram",
+          "ar": "648/966"
+        },
+        {
+          "src": "/uploads/Screenshot 2026-07-16 at 12.54.41 AM.png",
+          "cap": "Signature Global · Realty+",
+          "ar": "1064/1414"
+        },
+        {
+          "src": "/uploads/Screenshot 2026-07-16 at 12.56.13 AM.png",
+          "cap": "Dalmia Bharat · Construction Week",
+          "ar": "1062/1316"
+        },
+        {
+          "src": "/uploads/Screenshot 2026-07-16 at 1.01.29 AM.png",
+          "cap": "Embassy Group · Forbes India",
+          "ar": "1060/1412"
+        }
+      ]
+    },
+    {
+      "type": "pains",
+      "label": "The problem",
+      "eyebrow": "Sound familiar?",
+      "titleHtml": "Big cheques need <span class=\"em\">big trust.</span>",
+      "lede": "A property purchase is most people’s largest transaction. They research the developer as much as the property, and an empty Google page kills deals quietly.",
+      "items": [
+        {
+          "icon": "search-x",
+          "text": "Buyers search your name before the site visit"
+        },
+        {
+          "icon": "shield-question",
+          "text": "No coverage reads as no track record"
+        },
+        {
+          "icon": "newspaper",
+          "text": "Competitors’ projects get press; yours don’t"
+        },
+        {
+          "icon": "users",
+          "text": "Channel partners push brands buyers recognize"
+        }
+      ]
+    },
+    {
+      "type": "split",
+      "label": "Our approach",
+      "idx": "01",
+      "eyebrow": "Our approach",
+      "titleHtml": "Make the brand as solid <span class=\"em\">as the build.</span>",
+      "lede": "Project launch coverage, leadership profiles and legacy stories in the outlets home-buyers and investors actually read, so every search about you ends in reassurance.",
+      "coreline": "People buy property from names they can verify.",
+      "chips": [
+        "Project launch coverage",
+        "Developer profiles",
+        "Legacy & milestone stories"
+      ],
+      "slots": [
+        {
+          "ph": "Project coverage screenshot",
+          "src": "/uploads/Screenshot 2026-07-16 at 1.01.29 AM.png",
+          "ar": "1060/1412"
+        }
+      ]
+    },
+    {
+      "type": "deliver",
+      "label": "The playbook",
+      "warm": true,
+      "eyebrow": "The playbook",
+      "titleHtml": "What it <span class=\"em\">looks like.</span>",
+      "items": [
+        {
+          "icon": "building-2",
+          "title": "Project launches",
+          "text": "Launch and possession milestones covered in news outlets buyers trust."
+        },
+        {
+          "icon": "user",
+          "title": "Leadership profiles",
+          "text": "The people behind the projects, features that humanize the brand."
+        },
+        {
+          "icon": "landmark",
+          "title": "Legacy stories",
+          "text": "Decades of delivery, put on the record in print and magazines."
+        },
+        {
+          "icon": "award",
+          "title": "Industry awards",
+          "text": "Recognitions that channel partners and buyers actually cite."
+        },
+        {
+          "icon": "instagram",
+          "title": "Social publicity",
+          "text": "Project content on the local and industry pages buyers follow."
+        },
+        {
+          "icon": "search",
+          "title": "Search insurance",
+          "text": "Your name returns coverage, not just listing portals."
+        }
+      ]
+    },
+    {
+      "type": "distgrid",
+      "eyebrow": "The distribution",
+      "titleHtml": "Outlets your buyers <span class=\"em\">actually read.</span>",
+      "groups": [
+        {
+          "label": "Real Estate & Infra",
+          "note": "Projects, possession, leadership",
+          "logos": [
+            [
+              "toi",
+              "The Times of India",
+              20
+            ],
+            [
+              "economic-times",
+              "The Economic Times",
+              17
+            ],
+            [
+              "hindustan-times",
+              "Hindustan Times",
+              26
+            ],
+            [
+              "moneycontrol",
+              "Moneycontrol",
+              18
+            ]
+          ],
+          "more": "35"
+        },
+        {
+          "label": "National News",
+          "note": "The Google-proof layer",
+          "logos": [
+            [
+              "toi",
+              "The Times of India",
+              20
+            ],
+            [
+              "hindustan-times",
+              "Hindustan Times",
+              26
+            ],
+            [
+              "the-hindu",
+              "The Hindu",
+              24
+            ],
+            [
+              "tribune",
+              "The Tribune",
+              24
+            ]
+          ],
+          "more": "30"
+        },
+        {
+          "label": "TV & Digital News",
+          "note": "Broadcast-grade visibility",
+          "logos": [
+            [
+              "zee-news",
+              "Zee News",
+              22
+            ],
+            [
+              "republic",
+              "Republic",
+              15
+            ],
+            [
+              "theprint",
+              "ThePrint",
+              16
+            ],
+            [
+              "midday",
+              "Mid-Day",
+              20
+            ]
+          ],
+          "more": "25"
+        }
+      ]
+    },
+    {
+      "type": "testis",
+      "eyebrow": "What clients say",
+      "titleHtml": "Hear it from <span class=\"em\">the featured.</span>",
+      "items": [
+        {
+          "initials": "KT",
+          "name": "Kabir T.",
+          "role": "Real estate developer",
+          "quote": "I used to explain who I was on every call. Now the first page of Google does it for me."
+        },
+        {
+          "initials": "MJ",
+          "name": "Meera J.",
+          "role": "Education entrepreneur",
+          "quote": "The magazine cover changed how my own industry treats me. Invitations started coming to us."
+        },
+        {
+          "initials": "NP",
+          "name": "Nisha P.",
+          "role": "HR consultant",
+          "quote": "One award, one panel, three articles, in a quarter. My LinkedIn inbox has never looked the same."
+        }
+      ]
+    },
+    {
+      "type": "cases",
+      "eyebrow": "Case studies",
+      "titleHtml": "Real clients. <span class=\"em\">Real first pages.</span>",
+      "items": [
+        {
+          "name": "AX Premium Properties",
+          "img": "/uploads/Screenshot 2026-07-16 at 4.54.12 PM.png",
+          "fit": "contain",
+          "ar": "8/7",
+          "note": "A Dubai brokerage's DAMAC Top Broker Award, presented by Shah Rukh Khan, covered across Times of India, Moneycontrol and Khaleej Times.",
+          "stats": [
+            [
+              "3",
+              "tier-1 outlets"
+            ],
+            [
+              "2",
+              "DAMAC Top Broker Awards"
+            ]
+          ]
+        },
+        {
+          "name": "Property Drone",
+          "img": "/uploads/Screenshot 2026-07-16 at 5.02.11 PM.png",
+          "fit": "contain",
+          "ar": "9/16",
+          "note": "“From startup to market leader”, ANI-syndicated coverage carried the five-year growth story across national dailies.",
+          "stats": [
+            [
+              "5+",
+              "national placements"
+            ],
+            [
+              "5",
+              "years to market leader"
+            ]
+          ]
+        },
+        {
+          "name": "Shree Kshetrapal Realty",
+          "img": "/uploads/Screenshot 2026-07-16 at 5.03.00 PM.png",
+          "fit": "contain",
+          "ar": "9/16",
+          "note": "Project and legacy stories placed with Republic News India, The Indian Bulletin and 1 Money Mania to build regional investor trust.",
+          "stats": [
+            [
+              "3",
+              "media placements"
+            ],
+            [
+              "Gujarat",
+              "regional authority"
+            ]
+          ]
+        },
+        {
+          "name": "Ace Estate",
+          "img": "/uploads/Screenshot 2026-07-16 at 5.04.38 PM.png",
+          "fit": "contain",
+          "ar": "9/16",
+          "note": "Founder Raymond Swamy's second-home investment story ran across ANI, Midday, Business Standard and The Print.",
+          "stats": [
+            [
+              "4",
+              "national placements"
+            ],
+            [
+              "1",
+              "founder profile story"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "type": "assure",
+      "titleHtml": "No retainers. No vague promises. <span class=\"em\">No surprises.</span>",
+      "lede": "PR has a reputation problem: monthly retainers, invisible work, reports full of “activity.” We run it differently, you know exactly what you are getting before you spend a rupee.",
+      "items": [
+        "The outlet mix is mapped and agreed before you commit",
+        "Every story is written for you, nothing goes out without your sign-off",
+        "You get every live link in a proof report, ready to share",
+        "Placements are permanent, indexed on Google, citable by AI platforms",
+        "No long lock-ins, engage per placement or per campaign"
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "titleHtml": "Pairs well <span class=\"em\">with.</span>",
+      "items": [
+        {
+          "title": "Press Releases",
+          "href": "/services/press-releases",
+          "text": "News coverage, written and indexed where people check."
+        },
+        {
+          "title": "Podcasts & Talk Shows",
+          "href": "/services/podcasts-and-talk-shows",
+          "text": "One conversation, months of content."
+        },
+        {
+          "title": "Magazine Features",
+          "href": "/services/magazine-features",
+          "text": "Covers and editorial spreads that turn visibility into status."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "q": "We are a regional developer. Does national press matter?",
+          "a": "A mix works best, national outlets for credibility, regional and city coverage for the buyers actually searching you."
+        },
+        {
+          "q": "Can PR help during a project launch?",
+          "a": "That is the ideal moment. Launch coverage compounds your ad spend, buyers who see the hoarding then search, and find news."
+        },
+        {
+          "q": "What about reputation issues?",
+          "a": "Positive, factual coverage is the durable fix, it fills your search results with the story you want told."
+        }
+      ]
+    }
+  ],
+  "cta": {
+    "title": "Sell trust first.<br><span class=\"em\">The property follows.</span>"
+  }
+}

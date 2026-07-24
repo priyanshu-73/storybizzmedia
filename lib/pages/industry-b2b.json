@@ -1,0 +1,319 @@
+{
+  "title": "B2B Companies PR",
+  "slug": "b2b",
+  "hero": {
+    "crumb": "Industries / <b>B2B Companies</b>",
+    "titleHtml": "Win the deal before <span class=\"em\">the first call.</span>",
+    "lede": "For B2B companies and services firms, executive authority and business-media coverage that survive procurement, shorten sales cycles and give your champion something to forward internally.",
+    "shot": "/uploads/Screenshot 2025-10-24 at 3.30.25 AM.png",
+    "shotTag": "Client business coverage"
+  },
+  "sections": [
+    {
+      "type": "logoband"
+    },
+    {
+      "type": "pains",
+      "label": "The problem",
+      "eyebrow": "Sound familiar?",
+      "titleHtml": "B2B buyers do their homework <span class=\"em\">silently.</span>",
+      "lede": "By the time a prospect talks to sales, they have already searched you, your founder and your category. What they find decides whether the call happens at all.",
+      "items": [
+        {
+          "icon": "search-x",
+          "text": "Procurement finds nothing to de-risk the decision"
+        },
+        {
+          "icon": "shield-question",
+          "text": "“How do we know you’re legit?” starts every call"
+        },
+        {
+          "icon": "users",
+          "text": "Your champion cannot sell you internally without proof"
+        },
+        {
+          "icon": "bot",
+          "text": "AI vendor-comparison queries skip uncovered companies"
+        }
+      ]
+    },
+    {
+      "type": "split",
+      "label": "Our approach",
+      "idx": "01",
+      "eyebrow": "Our approach",
+      "titleHtml": "Authority that survives <span class=\"em\">procurement.</span>",
+      "lede": "Executive features, industry commentary and case-backed coverage in the business media your buyers cite, so every stakeholder who searches you finds reassurance, not silence.",
+      "coreline": "Be pre-approved before the RFP.",
+      "chips": [
+        "Executive thought leadership",
+        "Industry commentary",
+        "Business-media coverage"
+      ],
+      "slots": [
+        {
+          "ph": "B2B coverage screenshot",
+          "ar": "4/5"
+        }
+      ]
+    },
+    {
+      "type": "deliver",
+      "label": "The playbook",
+      "warm": true,
+      "eyebrow": "The playbook",
+      "titleHtml": "What it <span class=\"em\">looks like.</span>",
+      "items": [
+        {
+          "icon": "user",
+          "title": "Executive features",
+          "text": "Leadership profiles that give the firm a credible public face."
+        },
+        {
+          "icon": "newspaper",
+          "title": "Industry commentary",
+          "text": "Your take in the trade and business press your buyers read."
+        },
+        {
+          "icon": "mic",
+          "title": "Panel & podcast circuit",
+          "text": "The industry conversations where authority is assigned."
+        },
+        {
+          "icon": "file-text",
+          "title": "Milestone coverage",
+          "text": "Clients won, expansions, partnerships, on the record."
+        },
+        {
+          "icon": "share-2",
+          "title": "Social publicity",
+          "text": "Placed on the pages and feeds your buyers already follow."
+        },
+        {
+          "icon": "award",
+          "title": "Industry recognition",
+          "text": "Awards that give champions ammunition internally."
+        }
+      ]
+    },
+    {
+      "type": "distgrid",
+      "eyebrow": "The distribution",
+      "titleHtml": "Outlets your buyers <span class=\"em\">actually read.</span>",
+      "groups": [
+        {
+          "label": "Business & Enterprise",
+          "note": "Trade and business press",
+          "logos": [
+            [
+              "economic-times",
+              "The Economic Times",
+              17
+            ],
+            [
+              "forbes-india",
+              "Forbes India",
+              24
+            ],
+            [
+              "theprint",
+              "ThePrint",
+              16
+            ],
+            [
+              "vccircle",
+              "VCCircle",
+              16
+            ]
+          ],
+          "more": "45"
+        },
+        {
+          "label": "National News",
+          "note": "The Google-proof layer",
+          "logos": [
+            [
+              "toi",
+              "The Times of India",
+              20
+            ],
+            [
+              "hindustan-times",
+              "Hindustan Times",
+              26
+            ],
+            [
+              "the-hindu",
+              "The Hindu",
+              24
+            ],
+            [
+              "tribune",
+              "The Tribune",
+              24
+            ]
+          ],
+          "more": "30"
+        },
+        {
+          "label": "TV & Digital News",
+          "note": "Broadcast-grade visibility",
+          "logos": [
+            [
+              "zee-news",
+              "Zee News",
+              22
+            ],
+            [
+              "republic",
+              "Republic",
+              15
+            ],
+            [
+              "theprint",
+              "ThePrint",
+              16
+            ],
+            [
+              "midday",
+              "Mid-Day",
+              20
+            ]
+          ],
+          "more": "25"
+        }
+      ]
+    },
+    {
+      "type": "testis",
+      "eyebrow": "What clients say",
+      "titleHtml": "Hear it from <span class=\"em\">the featured.</span>",
+      "items": [
+        {
+          "initials": "SD",
+          "name": "Shreya D.",
+          "role": "SaaS co-founder",
+          "quote": "Our company finally looks as established as it actually is. Enterprise buyers stopped asking how they could know we were legit."
+        },
+        {
+          "initials": "AR",
+          "name": "Aditya R.",
+          "role": "Fintech founder",
+          "quote": "I asked ChatGPT who the credible players in our category were. We were in the answer. That was the moment it clicked."
+        },
+        {
+          "initials": "NP",
+          "name": "Nisha P.",
+          "role": "HR consultant",
+          "quote": "One award, one panel, three articles, in a quarter. My LinkedIn inbox has never looked the same."
+        }
+      ]
+    },
+    {
+      "type": "cases",
+      "eyebrow": "Case studies",
+      "titleHtml": "Real clients. <span class=\"em\">Real first pages.</span>",
+      "items": [
+        {
+          "name": "Klip Entertainment",
+          "img": "/assets/case-klip-serp.png",
+          "note": "Search “klip entertainment” today, The Times of India, Mint, afaqs! and ANI News fill the first page.",
+          "stats": [
+            [
+              "12+",
+              "media placements"
+            ],
+            [
+              "1",
+              "Fortune 500 feature"
+            ]
+          ]
+        },
+        {
+          "name": "Blinkit AI",
+          "img": "/assets/case-blinkit-serp.png",
+          "note": "Funding story across national media, and now discoverable by ChatGPT, Gemini and Perplexity.",
+          "stats": [
+            [
+              "12+",
+              "publications"
+            ],
+            [
+              "120+",
+              "story pickups"
+            ]
+          ]
+        },
+        {
+          "name": "Conbun",
+          "img": "/assets/case-conbun-forbes.png",
+          "note": "“How Conbun is digitizing everyday expertise”, a full editorial story, live on Forbes India.",
+          "stats": [
+            [
+              "1",
+              "Forbes feature"
+            ],
+            [
+              "10+",
+              "publications"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "type": "assure",
+      "titleHtml": "No retainers. No vague promises. <span class=\"em\">No surprises.</span>",
+      "lede": "PR has a reputation problem: monthly retainers, invisible work, reports full of “activity.” We run it differently, you know exactly what you are getting before you spend a rupee.",
+      "items": [
+        "The outlet mix is mapped and agreed before you commit",
+        "Every story is written for you, nothing goes out without your sign-off",
+        "You get every live link in a proof report, ready to share",
+        "Placements are permanent, indexed on Google, citable by AI platforms",
+        "No long lock-ins, engage per placement or per campaign"
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "titleHtml": "Pairs well <span class=\"em\">with.</span>",
+      "items": [
+        {
+          "title": "Press Releases",
+          "href": "/services/press-releases",
+          "text": "News coverage, written and indexed where people check."
+        },
+        {
+          "title": "Podcasts & Talk Shows",
+          "href": "/services/podcasts-and-talk-shows",
+          "text": "One conversation, months of content."
+        },
+        {
+          "title": "Magazine Features",
+          "href": "/services/magazine-features",
+          "text": "Covers and editorial spreads that turn visibility into status."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "q": "Our buyers are a niche audience. Does mass media help?",
+          "a": "The mix skews to trade and business outlets your buyers cite, mass media adds the Google-proof layer for procurement."
+        },
+        {
+          "q": "Can PR really shorten sales cycles?",
+          "a": "Coverage answers the trust questions before the call, so conversations start further down the funnel. Clients consistently report warmer first meetings."
+        },
+        {
+          "q": "Who from our team needs to be involved?",
+          "a": "Usually just the founder or one executive, for about an hour per placement."
+        }
+      ]
+    }
+  ],
+  "cta": {
+    "title": "Every stakeholder searches.<br><span class=\"em\">Give them the answer.</span>"
+  }
+}

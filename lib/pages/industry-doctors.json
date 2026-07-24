@@ -1,0 +1,325 @@
+{
+  "title": "Doctors &amp; Healthcare PR",
+  "slug": "doc",
+  "hero": {
+    "crumb": "Industries / <b>Doctors &amp; Healthcare</b>",
+    "titleHtml": "Patients choose the doctor <span class=\"em\">they can verify.</span>",
+    "lede": "For doctors, clinics and hospitals, practitioner profiles, expert commentary and health features that make patients confident before the first consultation.",
+    "shotPh": "Doctor feature / health article",
+    "shotTag": "Client health feature"
+  },
+  "sections": [
+    {
+      "type": "logoband"
+    },
+    {
+      "type": "pains",
+      "label": "The problem",
+      "eyebrow": "Sound familiar?",
+      "titleHtml": "Referrals now start <span class=\"em\">with a search.</span>",
+      "lede": "Patients research doctors like they research everything else. The credentials on your clinic wall do not show up on Google, coverage does.",
+      "items": [
+        {
+          "icon": "search-x",
+          "text": "Patients find directory listings, not your expertise"
+        },
+        {
+          "icon": "newspaper",
+          "text": "No articles establish you as the specialist you are"
+        },
+        {
+          "icon": "users",
+          "text": "Younger patients pick practitioners they can see online"
+        },
+        {
+          "icon": "bot",
+          "text": "AI health queries recommend covered specialists"
+        }
+      ]
+    },
+    {
+      "type": "split",
+      "label": "Our approach",
+      "idx": "01",
+      "eyebrow": "Our approach",
+      "titleHtml": "Authority, published <span class=\"em\">ethically.</span>",
+      "lede": "Expert commentary in health media, practitioner profiles and patient-education features, visibility built on your genuine expertise, always factual and dignified in tone.",
+      "coreline": "Be the specialist the coverage already vouches for.",
+      "chips": [
+        "Expert health commentary",
+        "Practitioner profiles",
+        "Patient-education features"
+      ],
+      "slots": [
+        {
+          "ph": "Health feature screenshot",
+          "ar": "4/5"
+        }
+      ]
+    },
+    {
+      "type": "deliver",
+      "label": "The playbook",
+      "warm": true,
+      "eyebrow": "The playbook",
+      "titleHtml": "What it <span class=\"em\">looks like.</span>",
+      "items": [
+        {
+          "icon": "stethoscope",
+          "title": "Practitioner profiles",
+          "text": "Your training, specialization and philosophy, on the record."
+        },
+        {
+          "icon": "newspaper",
+          "title": "Expert commentary",
+          "text": "Quoted in the health stories patients are already reading."
+        },
+        {
+          "icon": "mic",
+          "title": "Health podcasts",
+          "text": "Long-form conversations that build patient trust at scale."
+        },
+        {
+          "icon": "book-open",
+          "title": "Magazine features",
+          "text": "Premium profiles for senior consultants and clinic founders."
+        },
+        {
+          "icon": "award",
+          "title": "Medical recognitions",
+          "text": "Industry awards that reinforce your standing among peers."
+        },
+        {
+          "icon": "search",
+          "title": "Name-search presence",
+          "text": "Your name returns expertise, not just booking pages."
+        }
+      ]
+    },
+    {
+      "type": "distgrid",
+      "eyebrow": "The distribution",
+      "titleHtml": "Outlets your buyers <span class=\"em\">actually read.</span>",
+      "groups": [
+        {
+          "label": "Health & Wellness",
+          "note": "Expert commentary, patient education",
+          "logos": [
+            [
+              "the-hindu",
+              "The Hindu",
+              24
+            ],
+            [
+              "hindustan-times",
+              "Hindustan Times",
+              26
+            ],
+            [
+              "toi",
+              "The Times of India",
+              20
+            ],
+            [
+              "theprint",
+              "ThePrint",
+              16
+            ]
+          ],
+          "more": "30"
+        },
+        {
+          "label": "National News",
+          "note": "The Google-proof layer",
+          "logos": [
+            [
+              "toi",
+              "The Times of India",
+              20
+            ],
+            [
+              "hindustan-times",
+              "Hindustan Times",
+              26
+            ],
+            [
+              "the-hindu",
+              "The Hindu",
+              24
+            ],
+            [
+              "tribune",
+              "The Tribune",
+              24
+            ]
+          ],
+          "more": "30"
+        },
+        {
+          "label": "TV & Digital News",
+          "note": "Broadcast-grade visibility",
+          "logos": [
+            [
+              "zee-news",
+              "Zee News",
+              22
+            ],
+            [
+              "republic",
+              "Republic",
+              15
+            ],
+            [
+              "theprint",
+              "ThePrint",
+              16
+            ],
+            [
+              "midday",
+              "Mid-Day",
+              20
+            ]
+          ],
+          "more": "25"
+        }
+      ]
+    },
+    {
+      "type": "testis",
+      "eyebrow": "What clients say",
+      "titleHtml": "Hear it from <span class=\"em\">the featured.</span>",
+      "items": [
+        {
+          "initials": "AM",
+          "name": "Ananya M.",
+          "role": "HealthTech CEO",
+          "quote": "We announced our funding through StoryBizz. 120+ pickups, a Google News top story, and our investors shared it everywhere."
+        },
+        {
+          "initials": "VK",
+          "name": "Vikram K.",
+          "role": "Consultant",
+          "quote": "The podcast placement alone paid for itself, the clips they cut from it ran on our socials for three months."
+        },
+        {
+          "initials": "NP",
+          "name": "Nisha P.",
+          "role": "HR consultant",
+          "quote": "One award, one panel, three articles, in a quarter. My LinkedIn inbox has never looked the same."
+        }
+      ]
+    },
+    {
+      "type": "cases",
+      "eyebrow": "Case studies",
+      "titleHtml": "Real clients. <span class=\"em\">Real first pages.</span>",
+      "items": [
+        {
+          "name": "Handa Aesthetics",
+          "img": "/uploads/pasted-1784232992503-0.png",
+          "fit": "contain",
+          "ph": "ANI · Business Standard · tummy-tuck recovery protocol feature",
+          "note": "The Delhi clinic's ERAS recovery protocol and patient-first approach ran across ANI, Business Standard and Hindustan Metro.",
+          "stats": [
+            [
+              "4",
+              "media placements"
+            ],
+            [
+              "2",
+              "national wire pickups"
+            ]
+          ]
+        },
+        {
+          "name": "Aestiva Plastic Surgery",
+          "img": "/uploads/pasted-1784233000956-0.png",
+          "fit": "contain",
+          "ph": "ANI · scarless facial contouring technique launch",
+          "note": "A breakthrough scarless facial contouring technique and new Delhi facility covered by Ahmedabad Mirror, ANI and Business Standard.",
+          "stats": [
+            [
+              "3",
+              "media placements"
+            ],
+            [
+              "1",
+              "new facility launch story"
+            ]
+          ]
+        },
+        {
+          "name": "Dr. Diva Kant Misra",
+          "img": "/uploads/pasted-1784232996912-0.png",
+          "fit": "contain",
+          "ph": "Mid-Day · Harvard Medical School program feature",
+          "note": "The Lucknow vitreoretinal surgeon's Harvard program completion and “International Hero of Ophthalmology” award covered by Mid-Day and PTI.",
+          "stats": [
+            [
+              "10,000+",
+              "retinal procedures"
+            ],
+            [
+              "2",
+              "national features"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "type": "assure",
+      "titleHtml": "No retainers. No vague promises. <span class=\"em\">No surprises.</span>",
+      "lede": "PR has a reputation problem: monthly retainers, invisible work, reports full of “activity.” We run it differently, you know exactly what you are getting before you spend a rupee.",
+      "items": [
+        "The outlet mix is mapped and agreed before you commit",
+        "Every story is written for you, nothing goes out without your sign-off",
+        "You get every live link in a proof report, ready to share",
+        "Placements are permanent, indexed on Google, citable by AI platforms",
+        "No long lock-ins, engage per placement or per campaign"
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "titleHtml": "Pairs well <span class=\"em\">with.</span>",
+      "items": [
+        {
+          "title": "Press Releases",
+          "href": "/services/press-releases",
+          "text": "News coverage, written and indexed where people check."
+        },
+        {
+          "title": "Podcasts & Talk Shows",
+          "href": "/services/podcasts-and-talk-shows",
+          "text": "One conversation, months of content."
+        },
+        {
+          "title": "Magazine Features",
+          "href": "/services/magazine-features",
+          "text": "Covers and editorial spreads that turn visibility into status."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "q": "Is PR appropriate for medical professionals?",
+          "a": "Yes, expert commentary and educational features are standard practice. We keep every placement factual and dignified; no claims, no sensationalism."
+        },
+        {
+          "q": "I have no time for interviews.",
+          "a": "Most placements need under an hour of your time. We handle the writing, coordination and follow-ups."
+        },
+        {
+          "q": "Does this work for clinics and hospitals too?",
+          "a": "Yes, institutional profiles, specialty launches and doctor spotlights follow the same playbook."
+        }
+      ]
+    }
+  ],
+  "cta": {
+    "title": "Your expertise is real.<br><span class=\"em\">Make it visible.</span>"
+  }
+}

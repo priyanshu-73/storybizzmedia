@@ -1,0 +1,404 @@
+{
+  "title": "Magazine Features",
+  "slug": "mag",
+  "hero": {
+    "crumb": "Services / <b>Magazine Features</b>",
+    "titleHtml": "The cover is <span class=\"em\">the credential.</span>",
+    "lede": "Front cover, inside editorial spreads and back-cover placements, across business, lifestyle and trade titles, in multiple industries and editions. One magazine feature does what a hundred posts cannot, it makes people treat you as the leader you already are.",
+    "shot": "/uploads/5c6eb99ecf2228f0dd1044a501ee7abd.jpg",
+    "shotTag": "Client cover · Fortune"
+  },
+  "sections": [
+    {
+      "type": "logoband"
+    },
+    {
+      "type": "pains",
+      "label": "The opportunity",
+      "eyebrow": "The opportunity",
+      "titleHtml": "Picture your story <span class=\"em\">on the cover.</span>",
+      "lede": "A feature you can frame, gift and hold, proof of stature that a claim never carries on its own.",
+      "items": [
+        {
+          "icon": "newspaper",
+          "text": "A feature that runs the cover, an inside spread or the back cover, not just one shot"
+        },
+        {
+          "icon": "badge-check",
+          "text": "Named press that carries more weight than any certificate"
+        },
+        {
+          "icon": "trending-up",
+          "text": "A cover story that puts you ahead of competitors without one"
+        },
+        {
+          "icon": "shield-check",
+          "text": "Instant, tangible proof of your standing"
+        },
+        {
+          "icon": "image",
+          "text": "A cover image you reuse for years, LinkedIn, decks, the office wall"
+        },
+        {
+          "icon": "link-2",
+          "text": "A named publication AI platforms and search engines can cite"
+        }
+      ]
+    },
+    {
+      "type": "magrack",
+      "eyebrow": "Magazines & editions",
+      "titleHtml": "Pick the cover that <span class=\"em\">fits your stature.</span>",
+      "lede": "Business, lifestyle, real estate and airline titles, front cover, inside spread or back cover, print and digital, across India and international editions. Each row is a sample, every category runs deeper than what's shown here.",
+      "groups": [
+        {
+          "label": "Business",
+          "note": "National newsweeklies, business monthlies & finance titles",
+          "items": [
+            {
+              "src": "/uploads/Cover_0.avif",
+              "name": "India Today",
+              "ed": "National newsweekly · cover feature"
+            },
+            {
+              "src": "/uploads/5186Y1Y+kYL._AC_UF1000,1000_QL80_.jpg",
+              "name": "Forbes India",
+              "ed": "Business monthly · cover feature"
+            },
+            {
+              "src": "/uploads/BT-Cover.webp",
+              "name": "Business Today",
+              "ed": "Business fortnightly · cover feature"
+            },
+            {
+              "src": "/uploads/81cgxTl6xyL._AC_UF1000,1000_QL80_.jpg",
+              "name": "Fortune India",
+              "ed": "Business monthly · cover feature"
+            },
+            {
+              "src": "/uploads/pasted-1784138086352-0.png",
+              "name": "Entrepreneur",
+              "ed": "Business monthly · cover feature"
+            },
+            {
+              "src": "/uploads/pasted-1784138188095-0.png",
+              "name": "Outlook Money",
+              "ed": "Personal finance monthly · cover feature"
+            }
+          ]
+        },
+        {
+          "label": "Lifestyle",
+          "note": "Fashion, culture & entertainment titles",
+          "items": [
+            {
+              "src": "/uploads/227972007-vogue-india-original-imafg63husefkr5z.webp",
+              "name": "Vogue India",
+              "ed": "Lifestyle monthly · cover feature"
+            },
+            {
+              "src": "/uploads/images (2).jpeg",
+              "name": "Femina",
+              "ed": "Lifestyle fortnightly · cover feature"
+            },
+            {
+              "src": "/uploads/e9577a8551091.560bf66feb089.jpg",
+              "name": "Cosmopolitan",
+              "ed": "Lifestyle monthly · cover feature"
+            },
+            {
+              "src": "/uploads/images (4).jpeg",
+              "name": "Grazia",
+              "ed": "Lifestyle monthly · cover feature"
+            }
+          ]
+        },
+        {
+          "label": "Real Estate & Design",
+          "note": "Architecture, interiors & property titles",
+          "items": [
+            {
+              "src": "/uploads/product-jpeg.jpg",
+              "name": "Architectural Digest",
+              "ed": "Design & architecture monthly · cover feature"
+            },
+            {
+              "src": "/uploads/pasted-1784138129883-0.png",
+              "name": "Elle Decor",
+              "ed": "Interior design bi-monthly · cover feature"
+            },
+            {
+              "src": "/uploads/pasted-1784138156504-0.png",
+              "name": "Realty+",
+              "ed": "Real estate monthly · cover feature"
+            }
+          ]
+        },
+        {
+          "label": "Airline & In-Flight",
+          "note": "In-flight magazines with a captive, high-income readership",
+          "items": [
+            {
+              "src": "/uploads/images (3).jpeg",
+              "name": "Hello 6E",
+              "ed": "In-flight magazine · cover feature"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "prtypes",
+      "eyebrow": "What we cover",
+      "titleHtml": "Every kind of placement, <span class=\"em\">covered.</span>",
+      "lede": "Matched to your industry and stature, not a one-size-fits-all layout.",
+      "items": [
+        {
+          "icon": "user-round",
+          "title": "Front Cover",
+          "text": "The lead placement, your face, your headline, the full masthead."
+        },
+        {
+          "icon": "book-open",
+          "title": "Inside Editorial Spread",
+          "text": "A multi-page feature inside the issue, with room for the full story."
+        },
+        {
+          "icon": "square",
+          "title": "Back Cover Placement",
+          "text": "Premium back-page real estate, seen by every reader."
+        },
+        {
+          "icon": "users",
+          "title": "Leadership Spread",
+          "text": "Multi-page features for founding teams and leadership."
+        },
+        {
+          "icon": "globe",
+          "title": "Multi-Industry Editions",
+          "text": "Business, lifestyle, trade and international titles matched to your category."
+        }
+      ]
+    },
+    {
+      "type": "proofwall",
+      "eyebrow": "Proof of work",
+      "titleHtml": "Covers in <span class=\"em\">the wild.</span>",
+      "items": [
+        {
+          "src": "/uploads/5c6eb99ecf2228f0dd1044a501ee7abd.jpg",
+          "cap": "Client cover · business monthly",
+          "ar": "3/4"
+        },
+        {
+          "src": "/uploads/04db2f7cb49f5bbd9dcfe9e2e2962f21.jpg",
+          "cap": "Client cover · quarterly",
+          "ar": "3/4"
+        },
+        {
+          "src": "/uploads/74683276264aef060350dabb32d7be1f.jpg",
+          "cap": "Client cover · industry edition",
+          "ar": "3/4"
+        }
+      ]
+    },
+    {
+      "type": "process",
+      "eyebrow": "How it works",
+      "titleHtml": "From shortlist <span class=\"em\">to shelf.</span>",
+      "steps": [
+        {
+          "title": "Match the magazine",
+          "text": "We shortlist titles that fit your industry and stature, business, lifestyle or trade, and show you exactly what each looks like."
+        },
+        {
+          "title": "Story and shoot",
+          "text": "An interview plus photo direction. No professional shoot? We send a simple brief your local photographer can follow."
+        },
+        {
+          "title": "The feature goes live",
+          "text": "Print and digital editions publish. You receive copies and high-resolution assets."
+        },
+        {
+          "title": "Make it work for you",
+          "text": "Cover on LinkedIn, framed in the office, in the pitch deck, status that keeps compounding."
+        }
+      ]
+    },
+    {
+      "type": "clientgrid",
+      "eyebrow": "Clients",
+      "titleHtml": "Brands that trusted us <span class=\"em\">with their story.</span>",
+      "items": [
+        {
+          "src": "/assets/clients/flipkart.png",
+          "name": "Flipkart"
+        },
+        {
+          "src": "/assets/clients/dabur.png",
+          "name": "Dabur"
+        },
+        {
+          "src": "/assets/clients/lotus-herbals.png",
+          "name": "Lotus Herbals"
+        },
+        {
+          "src": "/assets/clients/srm.png",
+          "name": "SRM Institute of Science & Technology"
+        },
+        {
+          "src": "/assets/clients/prabhuji.png",
+          "name": "Prabhuji Pure Food"
+        },
+        {
+          "src": "/assets/clients/blue-tea.avif",
+          "name": "Blue Tea"
+        },
+        {
+          "src": "/assets/clients/mbaazar.png",
+          "name": "mbaazar"
+        },
+        {
+          "src": "/assets/clients/culture.jpg",
+          "name": "Culture",
+          "style": "max-height: 52px;"
+        },
+        {
+          "src": "/assets/clients/studd-muffyn.avif",
+          "name": "Studd Muffyn India"
+        },
+        {
+          "src": "/assets/clients/blue-tokai.avif",
+          "name": "Blue Tokai Coffee Roasters"
+        },
+        {
+          "src": "/assets/clients/bonkers.webp",
+          "name": "Bonkers"
+        },
+        {
+          "src": "/assets/clients/conbun2.png",
+          "name": "Conbun"
+        },
+        {
+          "src": "/assets/clients/iit-patna.png",
+          "name": "IIT Patna"
+        },
+        {
+          "src": "/assets/clients/justdial.png",
+          "name": "Justdial"
+        },
+        {
+          "src": "/assets/clients/soulflower.webp",
+          "name": "Soulflower"
+        }
+      ],
+      "more": "+ 8,000 more"
+    },
+    {
+      "type": "cases",
+      "eyebrow": "Case studies",
+      "titleHtml": "Real clients. <span class=\"em\">Real first pages.</span>",
+      "items": [
+        {
+          "name": "Klip Entertainment",
+          "img": "/assets/case-klip-serp.png",
+          "note": "Search “klip entertainment” today, The Times of India, Mint, afaqs! and ANI News fill the first page.",
+          "stats": [
+            [
+              "12+",
+              "media placements"
+            ],
+            [
+              "1",
+              "Fortune 500 feature"
+            ]
+          ]
+        },
+        {
+          "name": "Blinkit AI",
+          "img": "/assets/case-blinkit-serp.png",
+          "note": "Funding story across national media, and now discoverable by ChatGPT, Gemini and Perplexity.",
+          "stats": [
+            [
+              "12+",
+              "publications"
+            ],
+            [
+              "120+",
+              "story pickups"
+            ]
+          ]
+        },
+        {
+          "name": "Conbun",
+          "img": "/assets/case-conbun-forbes.png",
+          "note": "“How Conbun is digitizing everyday expertise”, a full editorial story, live on Forbes India.",
+          "stats": [
+            [
+              "1",
+              "Forbes feature"
+            ],
+            [
+              "10+",
+              "publications"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "type": "assure",
+      "titleHtml": "No retainers. No vague promises. <span class=\"em\">No surprises.</span>",
+      "lede": "PR has a reputation problem: monthly retainers, invisible work, reports full of “activity.” We run it differently, you know exactly what you are getting before you spend a rupee.",
+      "items": [
+        "The outlet mix is mapped and agreed before you commit",
+        "Every story is written for you, nothing goes out without your sign-off",
+        "You get every live link in a proof report, ready to share",
+        "Placements are permanent, indexed on Google, citable by AI platforms",
+        "No long lock-ins, engage per placement or per campaign"
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "titleHtml": "Pairs well <span class=\"em\">with.</span>",
+      "items": [
+        {
+          "title": "Press Releases",
+          "href": "/services/press-releases",
+          "text": "News coverage, written and indexed where people check."
+        },
+        {
+          "title": "Podcasts & Talk Shows",
+          "href": "/services/podcasts-and-talk-shows",
+          "text": "One conversation, months of content."
+        },
+        {
+          "title": "Social Media Publicity",
+          "href": "/services/social-media-publicity",
+          "text": "Your story in the feeds your market scrolls."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "q": "Print, digital, or both?",
+          "a": "Most placements include both a print edition and a digital feature. We confirm the exact format for each title before you commit."
+        },
+        {
+          "q": "Do I need professional photos?",
+          "a": "Strong photos help a cover. If you do not have them, we send a shoot brief, many clients shoot locally with our direction and the results work beautifully."
+        },
+        {
+          "q": "Which magazines can I be in?",
+          "a": "Business, lifestyle and industry titles across India, plus international editions for senior profiles. The shortlist depends on your profile, we map it on the intake call."
+        }
+      ]
+    }
+  ],
+  "cta": {
+    "title": "Put your story<br><span class=\"em\">on the cover.</span>"
+  }
+}

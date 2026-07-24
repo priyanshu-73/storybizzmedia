@@ -1,0 +1,421 @@
+{
+  "title": "D2C Brands PR",
+  "slug": "d2c",
+  "hero": {
+    "crumb": "Industries / <b>D2C Brands</b>",
+    "titleHtml": "Turn a brand people buy into a brand <span class=\"em\">people talk about.</span>",
+    "lede": "For consumer brands, founder stories, product coverage and social publicity that lower acquisition costs by making your name pre-trusted before the ad click.",
+    "shot": "/uploads/0 (1).png",
+    "shotTag": "Client brand coverage"
+  },
+  "sections": [
+    {
+      "type": "logoband"
+    },
+    {
+      "type": "pains",
+      "label": "The problem",
+      "eyebrow": "Sound familiar?",
+      "titleHtml": "Ads rent attention. <span class=\"em\">PR owns it.</span>",
+      "lede": "Every D2C brand fights rising CAC. Coverage is the asset that compounds, it warms cold traffic, lifts landing-page conversion and gets marketplaces to take you seriously.",
+      "items": [
+        {
+          "icon": "trending-down",
+          "text": "CAC keeps climbing while trust stays flat"
+        },
+        {
+          "icon": "search-x",
+          "text": "Shoppers who search your brand find only your own site"
+        },
+        {
+          "icon": "newspaper",
+          "text": "Competitors’ “as seen in” bars convert better than yours"
+        },
+        {
+          "icon": "users",
+          "text": "Retail and marketplace buyers check your press"
+        }
+      ]
+    },
+    {
+      "type": "split",
+      "label": "Our approach",
+      "idx": "01",
+      "eyebrow": "Our approach",
+      "titleHtml": "The story behind <span class=\"em\">the product.</span>",
+      "lede": "Founder journeys, category stories and milestone coverage, plus social placements on the theme pages your customers scroll, so the brand feels familiar before the first purchase.",
+      "coreline": "Familiar brands convert cheaper.",
+      "chips": [
+        "Founder & brand stories",
+        "“As featured in” credentials",
+        "Theme-page social placements"
+      ],
+      "slots": [
+        {
+          "ph": "Brand story screenshot",
+          "src": "/assets/case-yoho.png",
+          "ar": "4/5"
+        }
+      ]
+    },
+    {
+      "type": "deliver",
+      "label": "The playbook",
+      "warm": true,
+      "eyebrow": "The playbook",
+      "titleHtml": "What it <span class=\"em\">looks like.</span>",
+      "items": [
+        {
+          "icon": "shopping-bag",
+          "title": "Brand stories",
+          "text": "Category and milestone coverage in business and consumer media."
+        },
+        {
+          "icon": "user",
+          "title": "Founder features",
+          "text": "The journey behind the brand, the story customers repeat."
+        },
+        {
+          "icon": "instagram",
+          "title": "Social publicity",
+          "text": "Reels and theme-page placements where your buyers scroll."
+        },
+        {
+          "icon": "badge-check",
+          "title": "“As featured in” bar",
+          "text": "The trust strip that lifts every landing page’s conversion."
+        },
+        {
+          "icon": "mic",
+          "title": "Founder podcasts",
+          "text": "D2C and commerce shows your peers and buyers follow."
+        },
+        {
+          "icon": "award",
+          "title": "Brand awards",
+          "text": "Recognitions that retail buyers and marketplaces notice."
+        }
+      ]
+    },
+    {
+      "type": "distgrid",
+      "eyebrow": "The distribution",
+      "titleHtml": "Outlets your buyers <span class=\"em\">actually read.</span>",
+      "groups": [
+        {
+          "label": "Consumer & D2C",
+          "note": "Brand and category stories",
+          "logos": [
+            [
+              "yourstory",
+              "YourStory",
+              15
+            ],
+            [
+              "toi",
+              "The Times of India",
+              20
+            ],
+            [
+              "midday",
+              "Mid-Day",
+              20
+            ],
+            [
+              "forbes-india",
+              "Forbes India",
+              24
+            ]
+          ],
+          "more": "40"
+        },
+        {
+          "label": "National News",
+          "note": "The Google-proof layer",
+          "logos": [
+            [
+              "toi",
+              "The Times of India",
+              20
+            ],
+            [
+              "hindustan-times",
+              "Hindustan Times",
+              26
+            ],
+            [
+              "the-hindu",
+              "The Hindu",
+              24
+            ],
+            [
+              "tribune",
+              "The Tribune",
+              24
+            ]
+          ],
+          "more": "30"
+        },
+        {
+          "label": "TV & Digital News",
+          "note": "Broadcast-grade visibility",
+          "logos": [
+            [
+              "zee-news",
+              "Zee News",
+              22
+            ],
+            [
+              "republic",
+              "Republic",
+              15
+            ],
+            [
+              "theprint",
+              "ThePrint",
+              16
+            ],
+            [
+              "midday",
+              "Mid-Day",
+              20
+            ]
+          ],
+          "more": "25"
+        }
+      ]
+    },
+    {
+      "type": "testis",
+      "eyebrow": "What clients say",
+      "titleHtml": "Hear it from <span class=\"em\">the featured.</span>",
+      "items": [
+        {
+          "initials": "RS",
+          "name": "Rohit S.",
+          "role": "D2C founder",
+          "quote": "Within two months, searching my name showed a Forbes feature, a podcast and three articles. Prospects come to calls already convinced."
+        },
+        {
+          "initials": "MJ",
+          "name": "Meera J.",
+          "role": "Education entrepreneur",
+          "quote": "The magazine cover changed how my own industry treats me. Invitations started coming to us."
+        },
+        {
+          "initials": "VK",
+          "name": "Vikram K.",
+          "role": "Consultant",
+          "quote": "The podcast placement alone paid for itself, the clips they cut from it ran on our socials for three months."
+        }
+      ]
+    },
+    {
+      "type": "cases",
+      "eyebrow": "Case studies",
+      "titleHtml": "Real clients. <span class=\"em\">Real first pages.</span>",
+      "items": [
+        {
+          "name": "Wenger India",
+          "img": "/assets/case-wenger.png",
+          "fit": "contain",
+          "note": "The Swiss brand's first e-commerce-enabled India site made news on FashionNetwork as it doubled down on D2C retail.",
+          "stats": [
+            [
+              "1",
+              "global trade feature"
+            ],
+            [
+              "D2C",
+              "launch story"
+            ]
+          ]
+        },
+        {
+          "name": "Khoya",
+          "img": "/assets/case-khoya.png",
+          "fit": "contain",
+          "note": "The premium D2C mithai brand's strategic investment from Atelier Expressions ran on Indian Retailer.",
+          "stats": [
+            [
+              "1",
+              "strategic investment"
+            ],
+            [
+              "3 min",
+              "editorial read"
+            ]
+          ]
+        },
+        {
+          "name": "Sotrue",
+          "img": "/assets/case-sotrue.png",
+          "fit": "contain",
+          "note": "Crossing ₹100 crore ARR, the D2C beauty brand's milestone was framed as the next phase of India's beauty growth.",
+          "stats": [
+            [
+              "₹100 Cr",
+              "ARR milestone"
+            ],
+            [
+              "1",
+              "industry feature"
+            ]
+          ]
+        },
+        {
+          "name": "CAVA",
+          "img": "/assets/case-cava.png",
+          "fit": "contain",
+          "note": "The D2C women's athleisure brand's ₹40 crore raise was covered by Inc42 as founder-led momentum.",
+          "stats": [
+            [
+              "₹40 Cr",
+              "funding covered"
+            ],
+            [
+              "1",
+              "Inc42 feature"
+            ]
+          ]
+        },
+        {
+          "name": "Clayco Cosmetics",
+          "img": "/assets/case-clayco.png",
+          "fit": "contain",
+          "note": "A ₹29.99 crore Series A from Twenty Nine Capital Partners, announced across business media.",
+          "stats": [
+            [
+              "₹29.99 Cr",
+              "Series A"
+            ],
+            [
+              "1",
+              "funding story"
+            ]
+          ]
+        },
+        {
+          "name": "Basil",
+          "img": "/assets/case-basil.png",
+          "fit": "contain",
+          "note": "The D2C lunchbox brand netted $2M to expand its portfolio, a founder story carried by Inc42.",
+          "stats": [
+            [
+              "$2M",
+              "raised"
+            ],
+            [
+              "1",
+              "Inc42 feature"
+            ]
+          ]
+        },
+        {
+          "name": "Yoho Footwear",
+          "img": "/assets/case-yoho.png",
+          "fit": "contain",
+          "note": "Founders Prateek Singhal and Ahmad Hushsham told the growth story, 4x annual, 12x YoY, with a ₹1,000 Cr by 2030 goal on Retailer.",
+          "stats": [
+            [
+              "12x",
+              "YoY growth"
+            ],
+            [
+              "₹1,000 Cr",
+              "2030 target"
+            ]
+          ]
+        },
+        {
+          "name": "Studd Muffyn",
+          "img": "/assets/case-studdmuffyn.png",
+          "fit": "contain",
+          "ph": "Mid-Day · Business Standard · HT City coverage",
+          "note": "The premium crystal home décor brand's founder journey and new animal-motif collection ran across Mid-Day, Business Standard and HT City.",
+          "stats": [
+            [
+              "3",
+              "media placements"
+            ],
+            [
+              "₹2,500 Cr",
+              "founder story"
+            ]
+          ]
+        },
+        {
+          "name": "State of Joy",
+          "img": "/assets/case-stateofjoy.png",
+          "fit": "contain",
+          "ph": "ANI · Mid-Day · PTI footwear launch coverage",
+          "note": "The performance footwear brand's biomechanics-first launch and ANATOM film were covered by ANI, Mid-Day and PTI.",
+          "stats": [
+            [
+              "3",
+              "media placements"
+            ],
+            [
+              "2",
+              "national wire pickups"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "type": "assure",
+      "titleHtml": "No retainers. No vague promises. <span class=\"em\">No surprises.</span>",
+      "lede": "PR has a reputation problem: monthly retainers, invisible work, reports full of “activity.” We run it differently, you know exactly what you are getting before you spend a rupee.",
+      "items": [
+        "The outlet mix is mapped and agreed before you commit",
+        "Every story is written for you, nothing goes out without your sign-off",
+        "You get every live link in a proof report, ready to share",
+        "Placements are permanent, indexed on Google, citable by AI platforms",
+        "No long lock-ins, engage per placement or per campaign"
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "titleHtml": "Pairs well <span class=\"em\">with.</span>",
+      "items": [
+        {
+          "title": "Press Releases",
+          "href": "/services/press-releases",
+          "text": "News coverage, written and indexed where people check."
+        },
+        {
+          "title": "Podcasts & Talk Shows",
+          "href": "/services/podcasts-and-talk-shows",
+          "text": "One conversation, months of content."
+        },
+        {
+          "title": "Magazine Features",
+          "href": "/services/magazine-features",
+          "text": "Covers and editorial spreads that turn visibility into status."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "q": "How does PR affect performance marketing?",
+          "a": "Branded search goes up and cold traffic converts better, coverage gives your ads a trust floor. Many clients see retargeting improve first."
+        },
+        {
+          "q": "We are a small brand. Too early?",
+          "a": "Founder stories work at any size, and early coverage compounds longest, because it keeps ranking as you grow."
+        },
+        {
+          "q": "Can you cover a product launch?",
+          "a": "Yes, launch coverage timed with your campaign, plus social placements the same week."
+        }
+      ]
+    }
+  ],
+  "cta": {
+    "title": "Make the brand familiar<br><span class=\"em\">before the ad.</span>"
+  }
+}

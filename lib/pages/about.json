@@ -1,0 +1,152 @@
+{
+  "title": "About Us",
+  "slug": "about",
+  "hero": {
+    "crumb": "Company / <b>About Us</b>",
+    "titleHtml": "We make good businesses <span class=\"em\">impossible to ignore.</span>",
+    "lede": "StoryBizz is a media visibility partner. We put founders, brands and professionals in the places where people decide who to trust, press, Google, podcasts, magazines and social feeds.",
+    "cta2": {
+      "label": "Work with us",
+      "href": "/contact"
+    },
+    "shotPh": "Team / office photo",
+    "shotAr": "4/4",
+    "shotTag": "The StoryBizz team"
+  },
+  "sections": [
+    {
+      "type": "logoband"
+    },
+    {
+      "type": "split",
+      "label": "Our story",
+      "idx": "01",
+      "eyebrow": "Our story",
+      "titleHtml": "Why do great businesses <span class=\"em\">stay invisible?</span>",
+      "lede": "Every market has excellent operators nobody has heard of, and average ones everyone has. The difference is rarely the product; it is public proof. We built StoryBizz to close that gap: one partner for press, podcasts, magazines, awards and the new frontier of AI visibility.",
+      "coreline": "Great work deserves public proof.",
+      "chips": [
+        "8,000+ clients served",
+        "40,000+ campaigns",
+        "500+ distribution channels"
+      ],
+      "slots": [
+        {
+          "ph": "Team at work",
+          "ar": "4/3"
+        }
+      ]
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "n": 8000,
+          "lbl": "Brands, founders and professionals made visible"
+        },
+        {
+          "n": 40000,
+          "lbl": "Campaigns delivered across media and platforms"
+        },
+        {
+          "n": 500,
+          "lbl": "Distribution channels available"
+        }
+      ]
+    },
+    {
+      "type": "deliver",
+      "label": "How we work",
+      "eyebrow": "How we work",
+      "titleHtml": "The principles behind <span class=\"em\">every placement.</span>",
+      "items": [
+        {
+          "icon": "check-check",
+          "title": "Real outlets only",
+          "text": "Every placement is verifiable, a link you can send to anyone."
+        },
+        {
+          "icon": "eye",
+          "title": "Transparent process",
+          "text": "You know what is being pitched, where, and how it is labelled, before you commit."
+        },
+        {
+          "icon": "compass",
+          "title": "Strategy before spend",
+          "text": "We map the right mix for your goals instead of selling a package."
+        },
+        {
+          "icon": "file-check",
+          "title": "You approve everything",
+          "text": "No story goes out without your sign-off."
+        },
+        {
+          "icon": "infinity",
+          "title": "Built to compound",
+          "text": "Every placement keeps working, ranking, cited, reusable."
+        },
+        {
+          "icon": "handshake",
+          "title": "Partner, not vendor",
+          "text": "One team across all channels, accountable for the outcome."
+        }
+      ]
+    },
+    {
+      "type": "testis",
+      "eyebrow": "What clients say",
+      "titleHtml": "Hear it from <span class=\"em\">the featured.</span>",
+      "items": [
+        {
+          "initials": "RS",
+          "name": "Rohit S.",
+          "role": "D2C founder",
+          "quote": "Within two months, searching my name showed a Forbes feature, a podcast and three articles. Prospects come to calls already convinced."
+        },
+        {
+          "initials": "SD",
+          "name": "Shreya D.",
+          "role": "SaaS co-founder",
+          "quote": "Our company finally looks as established as it actually is. Enterprise buyers stopped asking how they could know we were legit."
+        },
+        {
+          "initials": "MJ",
+          "name": "Meera J.",
+          "role": "Education entrepreneur",
+          "quote": "The magazine cover changed how my own industry treats me. Invitations started coming to us."
+        }
+      ]
+    },
+    {
+      "type": "team",
+      "label": "Team",
+      "eyebrow": "The team",
+      "titleHtml": "The people behind <span class=\"em\">the placements.</span>",
+      "members": [
+        {
+          "name": "Founder & CEO",
+          "role": "Strategy & media relations"
+        },
+        {
+          "name": "Head of Editorial",
+          "role": "Stories, features & press"
+        },
+        {
+          "name": "Head of Partnerships",
+          "role": "Outlets, shows & awards"
+        },
+        {
+          "name": "Head of Client Success",
+          "role": "Delivery & reporting"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "titleHtml": "Be seen. Be trusted. <span class=\"em\">Be remembered.</span>"
+    }
+  ],
+  "cta": {
+    "title": "Your story is ready.<br><span class=\"em\">Let’s publish it.</span>"
+  }
+}

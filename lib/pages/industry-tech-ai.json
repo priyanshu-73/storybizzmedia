@@ -1,0 +1,383 @@
+{
+  "title": "Tech &amp; AI PR",
+  "slug": "tech",
+  "hero": {
+    "crumb": "Industries / <b>Tech &amp; AI</b>",
+    "titleHtml": "PR for teams building <span class=\"em\">the future.</span>",
+    "lede": "Funding news, product launches and founder stories for startups and AI companies, coverage that convinces investors, enterprise buyers and senior hires that you are the real thing.",
+    "shot": "/uploads/Screenshot 2026-07-16 at 12.38.54 AM.png",
+    "shotAr": "640/1418",
+    "shotTag": "Forbes India · founder feature"
+  },
+  "sections": [
+    {
+      "type": "logoband"
+    },
+    {
+      "type": "proofwall",
+      "eyebrow": "Proof of work",
+      "titleHtml": "Real articles, real feeds, <span class=\"em\">real first pages.</span>",
+      "items": [
+        {
+          "src": "/uploads/Screenshot 2026-07-16 at 12.38.54 AM.png",
+          "cap": "Forbes India · founder feature",
+          "ar": "640/1418"
+        },
+        {
+          "src": "/uploads/Screenshot 2026-07-16 at 12.40.45 AM.png",
+          "cap": "TechCircle · launch coverage",
+          "ar": "1720/1596"
+        },
+        {
+          "src": "/uploads/Screenshot 2026-07-16 at 12.41.10 AM.png",
+          "cap": "VCCircle · funding story",
+          "ar": "1918/1592"
+        },
+        {
+          "src": "/uploads/Screenshot 2026-07-16 at 12.42.11 AM.png",
+          "cap": "HT Tech · product coverage",
+          "ar": "466/1178"
+        },
+        {
+          "src": "/uploads/Screenshot 2026-07-16 at 12.45.37 AM.png",
+          "cap": "“AI Will 10X Your Income” · YouTube, 3.3M+ views",
+          "ar": "1036/598"
+        },
+        {
+          "src": "/uploads/Screenshot 2026-07-16 at 12.46.59 AM.png",
+          "cap": "The Ranveer Show · AI podcast, 1 lakh+ views",
+          "ar": "1038/594"
+        },
+        {
+          "src": "/uploads/Screenshot 2026-07-16 at 12.43.32 AM.png",
+          "cap": "Reel · India Lead Nation, 65.8K likes",
+          "ar": "750/1358"
+        },
+        {
+          "src": "/uploads/Screenshot 2026-07-16 at 12.45.12 AM.png",
+          "cap": "Reel · founder social placement",
+          "ar": "468/1084"
+        },
+        {
+          "src": "/uploads/pasted-1784143077799-0.png",
+          "cap": "TechIndia Transformation Awards · on stage",
+          "ar": "640/480"
+        },
+        {
+          "src": "/uploads/pasted-1784143090207-0.png",
+          "cap": "Amazon Best in Tech Awards 2025 · jury",
+          "ar": "335/597"
+        }
+      ]
+    },
+    {
+      "type": "pains",
+      "label": "The problem",
+      "eyebrow": "Sound familiar?",
+      "titleHtml": "Great tech, <span class=\"em\">invisible company.</span>",
+      "lede": "In tech, credibility gets diligenced. Before the term sheet, before the enterprise pilot, before the senior hire accepts, they search you.",
+      "items": [
+        {
+          "icon": "search-x",
+          "text": "Investors find nothing when they diligence you"
+        },
+        {
+          "icon": "building",
+          "text": "Enterprise buyers hesitate on unknown vendors"
+        },
+        {
+          "icon": "users",
+          "text": "Senior candidates cannot verify your momentum"
+        },
+        {
+          "icon": "bot",
+          "text": "AI tools skip you in your own category"
+        }
+      ]
+    },
+    {
+      "type": "split",
+      "label": "Our approach",
+      "idx": "01",
+      "eyebrow": "Our approach",
+      "titleHtml": "Coverage timed to <span class=\"em\">your milestones.</span>",
+      "lede": "Funding announcements with maximum pickups, launch stories that rank, founder features that warm up investor rooms, sequenced around your actual roadmap, not a retainer calendar.",
+      "coreline": "Be diligence-proof before diligence starts.",
+      "chips": [
+        "Funding & launch announcements",
+        "Founder features",
+        "Social media publicity"
+      ],
+      "slots": [
+        {
+          "ph": "Tech coverage screenshot",
+          "src": "/uploads/Screenshot 2026-07-16 at 12.41.10 AM.png",
+          "ar": "1918/1592"
+        }
+      ]
+    },
+    {
+      "type": "deliver",
+      "label": "The playbook",
+      "warm": true,
+      "eyebrow": "The playbook",
+      "titleHtml": "What it <span class=\"em\">looks like.</span>",
+      "items": [
+        {
+          "icon": "megaphone",
+          "title": "Funding announcements",
+          "text": "Round coverage across business media, with embargo timing and 100+ syndicated pickups."
+        },
+        {
+          "icon": "rocket",
+          "title": "Launch stories",
+          "text": "Product and expansion news, written properly and indexed on Google News."
+        },
+        {
+          "icon": "user",
+          "title": "Founder features",
+          "text": "Long-form stories that make investor rooms warmer before you walk in."
+        },
+        {
+          "icon": "mic",
+          "title": "Podcast circuit",
+          "text": "The founder-story and industry shows your buyers and peers listen to."
+        },
+        {
+          "icon": "share-2",
+          "title": "Social publicity",
+          "text": "Placed on the pages and feeds your buyers already follow."
+        },
+        {
+          "icon": "award",
+          "title": "Startup recognitions",
+          "text": "Credible industry awards that compress trust into one line on your deck."
+        }
+      ]
+    },
+    {
+      "type": "distgrid",
+      "eyebrow": "The distribution",
+      "titleHtml": "Outlets your buyers <span class=\"em\">actually read.</span>",
+      "groups": [
+        {
+          "label": "Tech & Startups",
+          "note": "Funding, launches, founder stories",
+          "logos": [
+            [
+              "yourstory",
+              "YourStory",
+              15
+            ],
+            [
+              "economic-times",
+              "The Economic Times",
+              17
+            ],
+            [
+              "moneycontrol",
+              "Moneycontrol",
+              18
+            ],
+            [
+              "vccircle",
+              "VCCircle",
+              16
+            ],
+            [
+              "techcircle",
+              "TechCircle",
+              16
+            ]
+          ],
+          "more": "60"
+        },
+        {
+          "label": "National News",
+          "note": "The Google-proof layer",
+          "logos": [
+            [
+              "toi",
+              "The Times of India",
+              20
+            ],
+            [
+              "hindustan-times",
+              "Hindustan Times",
+              26
+            ],
+            [
+              "the-hindu",
+              "The Hindu",
+              24
+            ],
+            [
+              "tribune",
+              "The Tribune",
+              24
+            ]
+          ],
+          "more": "30"
+        },
+        {
+          "label": "TV & Digital News",
+          "note": "Broadcast-grade visibility",
+          "logos": [
+            [
+              "zee-news",
+              "Zee News",
+              22
+            ],
+            [
+              "republic",
+              "Republic",
+              15
+            ],
+            [
+              "theprint",
+              "ThePrint",
+              16
+            ],
+            [
+              "midday",
+              "Mid-Day",
+              20
+            ]
+          ],
+          "more": "25"
+        }
+      ]
+    },
+    {
+      "type": "testis",
+      "eyebrow": "What clients say",
+      "titleHtml": "Hear it from <span class=\"em\">the featured.</span>",
+      "items": [
+        {
+          "initials": "AR",
+          "name": "Aditya R.",
+          "role": "Fintech founder",
+          "quote": "I asked ChatGPT who the credible players in our category were. We were in the answer. That was the moment it clicked."
+        },
+        {
+          "initials": "SD",
+          "name": "Shreya D.",
+          "role": "SaaS co-founder",
+          "quote": "Our company finally looks as established as it actually is. Enterprise buyers stopped asking how they could know we were legit."
+        },
+        {
+          "initials": "AM",
+          "name": "Ananya M.",
+          "role": "HealthTech CEO",
+          "quote": "We announced our funding through StoryBizz. 120+ pickups, a Google News top story, and our investors shared it everywhere."
+        }
+      ]
+    },
+    {
+      "type": "cases",
+      "eyebrow": "Case studies",
+      "titleHtml": "Real clients. <span class=\"em\">Real first pages.</span>",
+      "items": [
+        {
+          "name": "Klip Entertainment",
+          "img": "/assets/case-klip-serp.png",
+          "note": "Search “klip entertainment” today, The Times of India, Mint, afaqs! and ANI News fill the first page.",
+          "stats": [
+            [
+              "12+",
+              "media placements"
+            ],
+            [
+              "1",
+              "Fortune 500 feature"
+            ]
+          ]
+        },
+        {
+          "name": "Blinkit AI",
+          "img": "/assets/case-blinkit-serp.png",
+          "note": "Funding story across national media, and now discoverable by ChatGPT, Gemini and Perplexity.",
+          "stats": [
+            [
+              "12+",
+              "publications"
+            ],
+            [
+              "120+",
+              "story pickups"
+            ]
+          ]
+        },
+        {
+          "name": "Conbun",
+          "img": "/assets/case-conbun-forbes.png",
+          "note": "“How Conbun is digitizing everyday expertise”, a full editorial story, live on Forbes India.",
+          "stats": [
+            [
+              "1",
+              "Forbes feature"
+            ],
+            [
+              "10+",
+              "publications"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "type": "assure",
+      "titleHtml": "No retainers. No vague promises. <span class=\"em\">No surprises.</span>",
+      "lede": "PR has a reputation problem: monthly retainers, invisible work, reports full of “activity.” We run it differently, you know exactly what you are getting before you spend a rupee.",
+      "items": [
+        "The outlet mix is mapped and agreed before you commit",
+        "Every story is written for you, nothing goes out without your sign-off",
+        "You get every live link in a proof report, ready to share",
+        "Placements are permanent, indexed on Google, citable by AI platforms",
+        "No long lock-ins, engage per placement or per campaign"
+      ]
+    },
+    {
+      "type": "related",
+      "eyebrow": "Keep exploring",
+      "titleHtml": "Pairs well <span class=\"em\">with.</span>",
+      "items": [
+        {
+          "title": "Press Releases",
+          "href": "/services/press-releases",
+          "text": "News coverage, written and indexed where people check."
+        },
+        {
+          "title": "Podcasts & Talk Shows",
+          "href": "/services/podcasts-and-talk-shows",
+          "text": "One conversation, months of content."
+        },
+        {
+          "title": "Magazine Features",
+          "href": "/services/magazine-features",
+          "text": "Covers and editorial spreads that turn visibility into status."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "q": "We are pre-revenue. Is PR premature?",
+          "a": "Not if you are raising, hiring or selling. The story is the vision and the team, coverage makes both verifiable when it matters."
+        },
+        {
+          "q": "Can you time coverage to our funding announcement?",
+          "a": "Yes. Announcement embargoes and coordinated distribution are standard for funding stories, we plan the date with you."
+        },
+        {
+          "q": "Do you understand deep-tech stories?",
+          "a": "Our writers turn technical products into stories business media will run, and you review every draft for accuracy before it goes out."
+        }
+      ]
+    }
+  ],
+  "cta": {
+    "title": "Build in public.<br><span class=\"em\">Be found in public.</span>"
+  }
+}
