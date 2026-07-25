@@ -41,6 +41,7 @@ const STEPS: Step[] = [
 ];
 
 const LS_KEY = "sb-pr-form-state";
+const LEADS_API_URL = process.env.NEXT_PUBLIC_LEADS_API_URL || "https://one.storybizz.in/api/landing/leads";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type Answers = Record<string, any>;
@@ -79,6 +80,7 @@ export default function PrModal() {
   const [answers, setAnswers] = useState<Answers>(saved.answers);
   const [done, setDone] = useState(saved.done);
   const [err, setErr] = useState("");
+  const [submitting, setSubmitting] = useState(false);
   const [dir, setDir] = useState<"fwd" | "back">("fwd");
   const bodyRef = useRef<HTMLDivElement>(null);
   const lastFocus = useRef<Element | null>(null);
@@ -139,7 +141,7 @@ export default function PrModal() {
     }
   };
 
-  const advance = () => {
+  const advance = async () => {
     setErr("");
     if (s.type === "text") {
       const v = (bodyRef.current?.querySelector<HTMLInputElement>("#pr-text")?.value || "").trim();
@@ -152,8 +154,37 @@ export default function PrModal() {
       const c = { phone: get("#pr-phone"), email: get("#pr-email"), city: get("#pr-city") };
       if (!c.phone) return setErr("Please add a phone / WhatsApp number.");
       if (!/^\S+@\S+\.\S+$/.test(c.email)) return setErr("Please add a valid email.");
-      setAnswers({ ...answers, contact: c, leadTag: leadTag(answers), timestamp: new Date().toISOString() });
-      setDone(true);
+      const finalAnswers: Answers = { ...answers, contact: c, leadTag: leadTag(answers), timestamp: new Date().toISOString() };
+      setAnswers(finalAnswers);
+      setSubmitting(true);
+      try {
+        const res = await fetch(LEADS_API_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: finalAnswers.name || null,
+            phone: c.phone,
+            email: c.email,
+            source: "storybizz_pr_modal",
+            notes: [
+              c.city ? `City: ${c.city}` : null,
+              finalAnswers.profile ? `Profile: ${finalAnswers.profile}` : null,
+              finalAnswers.history ? `PR history: ${finalAnswers.history}` : null,
+              finalAnswers.stage ? `Stage: ${finalAnswers.stage}` : null,
+              (finalAnswers.interest || []).length ? `Interested in: ${finalAnswers.interest.join(", ")}` : null,
+              finalAnswers.goal ? `Goal: ${finalAnswers.goal}` : null,
+              finalAnswers.budget ? `Budget: ${finalAnswers.budget}` : null,
+              `Lead tag: ${finalAnswers.leadTag}`,
+            ].filter(Boolean).join("\n"),
+          }),
+        });
+        if (!res.ok) throw new Error("Request failed");
+        setDone(true);
+      } catch {
+        setErr("Something went wrong sending your details. Please try again or message us on WhatsApp.");
+      } finally {
+        setSubmitting(false);
+      }
       return;
     }
     setDir("fwd");
@@ -284,8 +315,8 @@ export default function PrModal() {
                     </button>
                   )}
                   {s.type !== "radio" ? (
-                    <button type="button" className="btn btn-primary pr-next" onClick={advance}>
-                      {s.type === "contact" ? "Get my PR recommendation" : "Continue"}
+                    <button type="button" className="btn btn-primary pr-next" onClick={advance} disabled={submitting}>
+                      {s.type === "contact" ? (submitting ? "Submitting…" : "Get my PR recommendation") : "Continue"}
                     </button>
                   ) : (
                     <span className="pr-hint" style={{ margin: 0 }}>
