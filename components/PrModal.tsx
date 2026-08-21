@@ -1,66 +1,65 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { Check, X } from "lucide-react";
+import { Calendar, Check, X } from "lucide-react";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
+import { waHref } from "@/lib/contact";
+import { postLead } from "@/lib/leads";
+import { EMAIL_ERROR, isValidEmail, isValidPhone, PHONE_ERROR } from "@/lib/validate";
 
-/* Multi-step PR recommendation form + fullscreen popup, ported from
-   storybizz-form.js. Any click on an a[href="#getstarted"] opens the modal. */
+/* "Explore what PR can do for you" survey popup, ported from storybizz-form.js.
+   Triggers: any #getstarted CTA (always), plus auto-after-delay / exit-intent
+   (once per visitor). Submitting also files the lead with the asset hub. */
 
 type Step =
-  | { key: string; label: string; q: string; type: "text"; placeholder: string; autocomplete?: string; intro?: boolean }
-  | { key: string; label: string; q: string; type: "radio" | "multi"; opts: string[]; hint?: string; intro?: boolean }
-  | { key: string; label: string; q: string; type: "contact" };
+  | { key: string; label: string; q: string; type: "text"; placeholder: string; autocomplete?: string }
+  | { key: string; label: string; q: string; type: "radio" | "multi"; opts: string[]; hint?: string; big?: boolean }
+  | { key: string; label: string; q: string; type: "links" | "contact" };
 
 const STEPS: Step[] = [
-  { key: "name", label: "Name", q: "What should we call you?", type: "text", placeholder: "Full name", autocomplete: "name" },
+  { key: "name", label: "You", q: "First, what should we call you?", type: "text", placeholder: "Full name", autocomplete: "name" },
   {
-    key: "profile", label: "Profile", q: "Who do you want PR for?", type: "radio", intro: true,
-    opts: ["Personal PR", "Company / Brand PR", "Founder + Company both", "Not sure yet"],
+    key: "tenure", label: "Stage", q: "How long have you been in business?", type: "radio",
+    opts: ["Less than 1 year", "1–5 years", "5–10 years", "10+ years"],
   },
   {
-    key: "history", label: "PR history", q: "Have you done PR before?", type: "radio",
-    opts: ["Yes, multiple times", "Yes, once or twice", "No, this is my first time", "Not sure what counts as PR"],
+    key: "articles", label: "Coverage", q: "Do you have any articles posted about you yet?", type: "radio",
+    opts: ["No, none yet", "Yes, a few", "Yes, many"],
   },
   {
-    key: "stage", label: "Stage", q: "How long have you been building this?", type: "radio",
-    opts: ["Less than 1 year", "1–3 years", "3–5 years", "5+ years"],
+    key: "path", label: "Direction", q: "Pick your type of visibility.", type: "radio", big: true,
+    opts: ["Credibility through legacy media", "Virality through social media"],
   },
   {
-    key: "interest", label: "Interest", q: "What kind of visibility are you exploring?", type: "multi", hint: "Select all that apply",
-    opts: ["Press Release / News Articles", "Founder Feature", "Forbes / Fortune / TOI", "Podcast", "Magazine Feature", "Talk Show", "Awards", "AI Visibility", "Reputation Management", "Not sure, need guidance"],
+    key: "needs", label: "Fit", q: "What suits your requirement?", type: "multi", hint: "Select all that apply",
+    opts: ["Press Release", "Awards", "Podcast", "Magazine", "AI Visibility", "Social Media PR", "Talk Show / Interviews"],
   },
+  { key: "links", label: "Links", q: "Where can we find you?", type: "links" },
   {
-    key: "goal", label: "Goal", q: "What is your main reason for PR right now?", type: "radio",
-    opts: ["Build trust on Google", "Get featured in top publications", "Improve founder/personal brand", "Attract clients", "Attract investors", "Launch announcement", "Look more credible before sales calls", "Other"],
+    key: "outreach", label: "Plan", q: "Would you like our team to reach out for your PR planning?", type: "radio", big: true,
+    opts: ["Yes, I want a personalised PR plan", "No, I will connect myself"],
   },
-  {
-    key: "budget", label: "Budget", q: "What budget range are you comfortable exploring?", type: "radio",
-    opts: ["Under ₹25,000", "₹25,000–₹75,000", "₹75,000–₹2,00,000", "₹2,00,000+", "Not sure yet"],
-  },
-  { key: "contact", label: "Contact", q: "Where should our media team send your PR recommendation?", type: "contact" },
+  { key: "contact", label: "Contact", q: "Last step — where should we send your PR plan?", type: "contact" },
 ];
 
-const LS_KEY = "sb-pr-form-state";
-const LEADS_API_URL = process.env.NEXT_PUBLIC_LEADS_API_URL || "https://one.storybizz.in/api/landing/leads";
+const LS_KEY = "sb-survey-state";
+const SEEN_KEY = "sb-survey-seen";
+/* paste a Calendly/booking URL here when ready; falls back to WhatsApp */
+const CALENDAR_URL = "";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type Answers = Record<string, any>;
 
 const leadTag = (a: Answers) => {
-  const budget: string = a.budget || "";
-  const interests: string[] = a.interest || [];
-  const hot = interests.some((i) => /Forbes|Podcast|Magazine|AI Visibility/i.test(i));
-  if (/75,000–|2,00,000/.test(budget) && hot) return "Hot Lead";
-  if (/25,000–₹75,000/.test(budget)) return "Warm Lead";
-  if (/Under ₹25,000/.test(budget)) return "Entry Lead";
-  return hot ? "Warm Lead" : "Entry Lead";
+  const needs: string[] = a.needs || [];
+  const hot = needs.some((i) => /Magazine|Podcast|AI Visibility|Awards|Talk Show/i.test(i));
+  if (a.outreach && /^Yes/i.test(a.outreach) && hot) return "Hot Lead";
+  if (a.outreach && /^Yes/i.test(a.outreach)) return "Warm Lead";
+  return "Nurture Lead";
 };
 
 /* Reads any saved progress once, up front, as a lazy useState initializer.
-   Guarded for SSR: this component still renders once on the server for the
-   initial HTML (it's only ever mounted client-side afterwards via the
-   "#getstarted" click handler, but the lazy initializer itself must not
-   assume a browser). */
+   Guarded for SSR: the lazy initializer must not assume a browser. */
 function loadSaved(): { step: number; answers: Answers; done: boolean } {
   if (typeof window === "undefined") return { step: 0, answers: {}, done: false };
   try {
@@ -91,12 +90,19 @@ export default function PrModal() {
     } catch {}
   }, [step, answers, done]);
 
-  const openModal = useCallback(() => {
+  const openModal = useCallback((auto: boolean) => {
+    /* auto/exit triggers count as "seen" so we don't nag again */
+    if (auto) {
+      try {
+        localStorage.setItem(SEEN_KEY, "1");
+      } catch {}
+    }
     lastFocus.current = document.activeElement;
     setOpen(true);
     requestAnimationFrame(() => setVisible(true));
     document.body.style.overflow = "hidden";
   }, []);
+
   const closeModal = useCallback(() => {
     setVisible(false);
     setTimeout(() => setOpen(false), 300);
@@ -110,7 +116,7 @@ export default function PrModal() {
       const a = (e.target as Element).closest?.('a[href="#getstarted"]');
       if (a) {
         e.preventDefault();
-        openModal();
+        openModal(false);
       }
     };
     const onKey = (e: KeyboardEvent) => {
@@ -124,8 +130,33 @@ export default function PrModal() {
     };
   }, [openModal, closeModal]);
 
+  /* automatic triggers — first-time visitors only: 12s dwell, or exit intent */
+  useEffect(() => {
+    let seen = true;
+    try {
+      seen = localStorage.getItem(SEEN_KEY) === "1";
+    } catch {}
+    if (seen || done) return;
+    const timer = setTimeout(() => openModal(true), 12000);
+    const onLeave = (e: MouseEvent) => {
+      if (e.clientY <= 0) {
+        clearTimeout(timer);
+        document.removeEventListener("mouseout", onLeave);
+        openModal(true);
+      }
+    };
+    document.addEventListener("mouseout", onLeave);
+    return () => {
+      clearTimeout(timer);
+      document.removeEventListener("mouseout", onLeave);
+    };
+  }, [openModal, done]);
+
   const s = STEPS[step];
+  const pct = Math.round((step / STEPS.length) * 100);
   const firstName = (answers.name || "").trim().split(" ")[0];
+
+  const field = (id: string) => (bodyRef.current?.querySelector<HTMLInputElement>(id)?.value || "").trim();
 
   const pick = (opt: string) => {
     setErr("");
@@ -137,54 +168,55 @@ export default function PrModal() {
     } else {
       setAnswers({ ...answers, [s.key]: opt });
       setDir("fwd");
-      setTimeout(() => setStep((v) => Math.min(v + 1, STEPS.length - 1)), 180);
+      setTimeout(() => setStep((v) => Math.min(v + 1, STEPS.length - 1)), 200);
     }
   };
 
-  const advance = async () => {
+  const submit = async (finalAnswers: Answers) => {
+    setSubmitting(true);
+    const c = finalAnswers.contact;
+    const l = finalAnswers.links || {};
+    const ok = await postLead({
+      name: finalAnswers.name || null,
+      phone: c.phone,
+      email: c.email,
+      source: "storybizz_pr_modal",
+      notes: [
+        finalAnswers.tenure ? `In business: ${finalAnswers.tenure}` : null,
+        finalAnswers.articles ? `Existing coverage: ${finalAnswers.articles}` : null,
+        finalAnswers.path ? `Direction: ${finalAnswers.path}` : null,
+        (finalAnswers.needs || []).length ? `Interested in: ${finalAnswers.needs.join(", ")}` : null,
+        l.site ? `Website: ${l.site}` : null,
+        l.social ? `Social: ${l.social}` : null,
+        finalAnswers.outreach ? `Wants outreach: ${finalAnswers.outreach}` : null,
+        `Lead tag: ${finalAnswers.leadTag}`,
+      ],
+    });
+    setSubmitting(false);
+    if (!ok) {
+      setErr("Something went wrong sending your details. Please try again or message us on WhatsApp.");
+      return;
+    }
+    setDone(true);
+  };
+
+  const advance = () => {
     setErr("");
     if (s.type === "text") {
-      const v = (bodyRef.current?.querySelector<HTMLInputElement>("#pr-text")?.value || "").trim();
+      const v = field("#pr-text");
       if (!v) return setErr("Please tell us your name.");
       setAnswers({ ...answers, [s.key]: v });
     } else if (s.type === "multi") {
-      if (!(answers[s.key] || []).length) return setErr('Pick at least one — or "Not sure, need guidance".');
+      if (!(answers[s.key] || []).length) return setErr("Pick at least one option.");
+    } else if (s.type === "links") {
+      setAnswers({ ...answers, links: { site: field("#pr-site"), social: field("#pr-social") } });
     } else if (s.type === "contact") {
-      const get = (id: string) => (bodyRef.current?.querySelector<HTMLInputElement>(id)?.value || "").trim();
-      const c = { phone: get("#pr-phone"), email: get("#pr-email"), city: get("#pr-city") };
-      if (!c.phone) return setErr("Please add a phone / WhatsApp number.");
-      if (!/^\S+@\S+\.\S+$/.test(c.email)) return setErr("Please add a valid email.");
+      const c = { email: field("#pr-email"), phone: field("#pr-phone") };
+      if (!isValidEmail(c.email)) return setErr(EMAIL_ERROR);
+      if (!isValidPhone(c.phone)) return setErr(PHONE_ERROR);
       const finalAnswers: Answers = { ...answers, contact: c, leadTag: leadTag(answers), timestamp: new Date().toISOString() };
       setAnswers(finalAnswers);
-      setSubmitting(true);
-      try {
-        const res = await fetch(LEADS_API_URL, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            name: finalAnswers.name || null,
-            phone: c.phone,
-            email: c.email,
-            source: "storybizz_pr_modal",
-            notes: [
-              c.city ? `City: ${c.city}` : null,
-              finalAnswers.profile ? `Profile: ${finalAnswers.profile}` : null,
-              finalAnswers.history ? `PR history: ${finalAnswers.history}` : null,
-              finalAnswers.stage ? `Stage: ${finalAnswers.stage}` : null,
-              (finalAnswers.interest || []).length ? `Interested in: ${finalAnswers.interest.join(", ")}` : null,
-              finalAnswers.goal ? `Goal: ${finalAnswers.goal}` : null,
-              finalAnswers.budget ? `Budget: ${finalAnswers.budget}` : null,
-              `Lead tag: ${finalAnswers.leadTag}`,
-            ].filter(Boolean).join("\n"),
-          }),
-        });
-        if (!res.ok) throw new Error("Request failed");
-        setDone(true);
-      } catch {
-        setErr("Something went wrong sending your details. Please try again or message us on WhatsApp.");
-      } finally {
-        setSubmitting(false);
-      }
+      void submit(finalAnswers);
       return;
     }
     setDir("fwd");
@@ -206,27 +238,38 @@ export default function PrModal() {
 
   if (!open) return null;
 
+  const who = answers.name ? ` — I'm ${answers.name}` : "";
+  const wa = waHref(`Hi StoryBizz, I just filled the PR survey${who}. I’d like my personalised PR plan.`);
+  /* no booking link yet, so "Book a call" falls back to WhatsApp with its own intent */
+  const book = CALENDAR_URL || waHref(`Hi StoryBizz, I just filled the PR survey${who}. I want to book a call.`);
+
+  /* subsequent steps address the visitor by name: "Anshul, how long have you…" */
+  const question = firstName && step > 0 ? `${firstName}, ${s.q.charAt(0).toLowerCase()}${s.q.slice(1)}` : s.q;
+
   return (
     <div
       id="getstarted"
       className={`pr-modal${visible ? " open" : ""}`}
       role="dialog"
       aria-modal="true"
-      aria-label="Find the right PR path"
-      data-screen-label="PR Form Popup"
+      aria-label="Explore what PR can do for you"
+      data-screen-label="PR Survey Popup"
     >
       <button type="button" className="pr-modal-close" aria-label="Close" onClick={closeModal}>
         <X />
       </button>
       <div className="wrap getstarted-grid">
         <div className="pr-intro">
-          <div className="eyebrow">Get featured</div>
+          <div className="eyebrow">Free PR assessment</div>
           <h2 className="big" style={{ fontSize: "clamp(34px, 4vw, 58px)" }}>
-            Find the right PR path for your profile
+            Explore what PR
+            <br />
+            can do for <span className="em">you.</span>
           </h2>
           <p className="lede" style={{ color: "rgba(255,255,255,0.6)", marginTop: 20, fontSize: 16 }}>
-            Answer a few quick questions and our media team will suggest the best publication, podcast, magazine or
-            visibility plan for you.
+            We have published <strong style={{ color: "#fff", fontWeight: 600 }}>8,000+ PR campaigns</strong> for more
+            than <strong style={{ color: "#fff", fontWeight: 600 }}>2,000 clients</strong> in the last 5 years. Answer a
+            few quick questions and our media team maps the right plan for you.
           </p>
         </div>
         <div className="pr-form" id="pr-form">
@@ -236,36 +279,43 @@ export default function PrModal() {
                 <Check strokeWidth={2.2} />
               </div>
               <div className="pr-q" style={{ marginTop: 18 }}>
-                {firstName ? `${firstName}, your` : "Your"} PR recommendation request has been received.
+                {firstName ? `${firstName}, you’re in.` : "You’re in."}
               </div>
-              <p className="pr-sub">Our media team will review your answers and contact you shortly.</p>
-              <div className="pr-actions" style={{ marginTop: 24 }}>
-                <a className="btn btn-primary" href="https://wa.me/919933041222" target="_blank" rel="noopener">
+              <p className="pr-sub">
+                Our media team is reviewing your answers and will map the right PR mix for you. Pick how you’d like to
+                talk:
+              </p>
+              <div className="pr-cta-row">
+                <a className="btn btn-wa" href={wa} target="_blank" rel="noopener">
+                  <WhatsAppIcon />
                   Chat on WhatsApp
                 </a>
-                <a className="btn btn-ghost-ink" href="#" target="_blank" rel="noopener">
-                  Schedule Google Meet
+                <a className="btn btn-ghost-ink" href={book} target="_blank" rel="noopener">
+                  <Calendar />
+                  Book a call
                 </a>
               </div>
-              <button type="button" className="pr-back" style={{ marginTop: 22 }} onClick={restart}>
+              <button type="button" className="pr-back" style={{ marginTop: 24 }} onClick={restart}>
                 Start over
               </button>
             </div>
           ) : (
             <>
-              <div className="pr-progress">
-                {STEPS.map((_, i) => (
-                  <i key={i} className={i <= step ? "on" : ""} />
-                ))}
+              <div className="pr-progress" role="progressbar" aria-valuenow={pct} aria-valuemin={0} aria-valuemax={100}>
+                <div className="pr-progress-track">
+                  {/* the element persists across steps, so CSS transitions the sweep for us */}
+                  <div className="pr-progress-fill" style={{ width: `${pct}%` }} />
+                </div>
+                <div className="pr-progress-meta">
+                  <span>
+                    Step {step + 1} of {STEPS.length}
+                  </span>
+                  <span className="pr-pct">{pct}%</span>
+                </div>
               </div>
               <div key={`${step}-${dir}`} className={`pr-body ${dir === "back" ? "pr-in-back" : "pr-in"}`} ref={bodyRef}>
-                <div className="pr-step-label">
-                  Step {step + 1} of {STEPS.length} — {s.label}
-                </div>
-                {"intro" in s && s.intro && firstName ? (
-                  <div className="pr-note">Great, {firstName}. Let’s understand what kind of visibility you need.</div>
-                ) : null}
-                <div className="pr-q">{s.q}</div>
+                <div className="pr-step-label">{s.label}</div>
+                <div className="pr-q">{question}</div>
                 {"hint" in s && s.hint ? <div className="pr-hint">{s.hint}</div> : null}
 
                 {s.type === "text" && (
@@ -276,36 +326,82 @@ export default function PrModal() {
                     placeholder={s.placeholder}
                     autoComplete={s.autocomplete || "off"}
                     defaultValue={answers[s.key] || ""}
-                    onKeyDown={(e) => e.key === "Enter" && (e.preventDefault(), advance())}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter") {
+                        e.preventDefault();
+                        advance();
+                      }
+                    }}
                     autoFocus
                   />
                 )}
                 {(s.type === "radio" || s.type === "multi") && (
-                  <div className="pr-opts">
+                  <div className={`pr-opts${s.big ? " pr-opts-lg" : ""}`}>
                     {s.opts.map((o) => {
                       const sel = s.type === "multi" ? (answers[s.key] || []).includes(o) : answers[s.key] === o;
                       return (
-                        <button key={o} type="button" className={`pr-opt${sel ? " sel" : ""}`} onClick={() => pick(o)}>
+                        <button
+                          key={o}
+                          type="button"
+                          className={`pr-opt${s.big ? " pr-opt-lg" : ""}${sel ? " sel" : ""}`}
+                          onClick={() => pick(o)}
+                        >
                           {o}
                         </button>
                       );
                     })}
                   </div>
                 )}
+                {s.type === "links" && (
+                  <div className="pr-fields">
+                    <label className="pr-flabel">
+                      Business website
+                      <input
+                        className="gs-field pr-input"
+                        id="pr-site"
+                        type="url"
+                        placeholder="https://yourcompany.com"
+                        autoComplete="url"
+                        defaultValue={answers.links?.site || ""}
+                      />
+                    </label>
+                    <label className="pr-flabel">
+                      LinkedIn / other social link
+                      <input
+                        className="gs-field pr-input"
+                        id="pr-social"
+                        type="text"
+                        placeholder="linkedin.com/in/…"
+                        defaultValue={answers.links?.social || ""}
+                      />
+                    </label>
+                  </div>
+                )}
                 {s.type === "contact" && (
-                  <>
-                    <input className="gs-field pr-input" id="pr-phone" type="tel" placeholder="Phone / WhatsApp" autoComplete="tel" defaultValue={answers.contact?.phone || ""} />
-                    <input className="gs-field pr-input" id="pr-email" type="email" placeholder="Email" autoComplete="email" defaultValue={answers.contact?.email || ""} />
-                    <input
-                      className="gs-field pr-input"
-                      id="pr-city"
-                      type="text"
-                      placeholder="City"
-                      autoComplete="address-level2"
-                      defaultValue={answers.contact?.city || ""}
-                      onKeyDown={(e) => e.key === "Enter" && (e.preventDefault(), advance())}
-                    />
-                  </>
+                  <div className="pr-fields">
+                    <label className="pr-flabel">
+                      Email
+                      <input
+                        className="gs-field pr-input"
+                        id="pr-email"
+                        type="email"
+                        placeholder="you@company.com"
+                        autoComplete="email"
+                        defaultValue={answers.contact?.email || ""}
+                      />
+                    </label>
+                    <label className="pr-flabel">
+                      Phone / WhatsApp
+                      <input
+                        className="gs-field pr-input"
+                        id="pr-phone"
+                        type="tel"
+                        placeholder="+91 …"
+                        autoComplete="tel"
+                        defaultValue={answers.contact?.phone || ""}
+                      />
+                    </label>
+                  </div>
                 )}
 
                 <div className="pr-actions">
@@ -316,11 +412,11 @@ export default function PrModal() {
                   )}
                   {s.type !== "radio" ? (
                     <button type="button" className="btn btn-primary pr-next" onClick={advance} disabled={submitting}>
-                      {s.type === "contact" ? (submitting ? "Submitting…" : "Get my PR recommendation") : "Continue"}
+                      {s.type === "contact" ? (submitting ? "Sending…" : "Get my PR plan") : "Continue"}
                     </button>
                   ) : (
                     <span className="pr-hint" style={{ margin: 0 }}>
-                      Pick one to continue
+                      Tap an option to continue
                     </span>
                   )}
                 </div>

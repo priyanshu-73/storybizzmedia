@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Hanken_Grotesk, Playfair_Display } from "next/font/google";
+import { Hanken_Grotesk, IBM_Plex_Mono, IBM_Plex_Serif, Instrument_Serif, Playfair_Display } from "next/font/google";
 import Nav from "@/components/Nav";
 import PrModal from "@/components/PrModal";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
@@ -18,6 +18,27 @@ const playfair = Playfair_Display({
   variable: "--font-playfair",
   subsets: ["latin"],
   weight: ["500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
+});
+
+/* The Draft's newsroom typography: mono chrome, serif body, serif pull-quotes. */
+const plexMono = IBM_Plex_Mono({
+  variable: "--font-plex-mono",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+});
+
+const plexSerif = IBM_Plex_Serif({
+  variable: "--font-plex-serif",
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  style: ["normal", "italic"],
+});
+
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-instrument-serif",
+  subsets: ["latin"],
+  weight: ["400"],
   style: ["normal", "italic"],
 });
 
@@ -57,7 +78,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-anim="rich">
-      <body className={`${hanken.variable} ${playfair.variable}`}>
+      <body className={`${hanken.variable} ${playfair.variable} ${plexMono.variable} ${plexSerif.variable} ${instrumentSerif.variable}`}>
         <Nav />
         {children}
         <PrModal />

@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { ArrowRight, ChevronDown, Menu, X } from "lucide-react";
-import { NAV_GROUPS } from "@/lib/nav";
+import { DRAFT_LINK, NAV_GROUPS } from "@/lib/nav";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
@@ -35,6 +35,9 @@ export default function Nav() {
                 </div>
               </div>
             ))}
+            <Link href={DRAFT_LINK[1]} className={`nav-solo${pathname === DRAFT_LINK[1] ? " cur" : ""}`}>
+              {DRAFT_LINK[0]}
+            </Link>
             <a href="#getstarted" className="btn btn-primary btn-sm">
               Get Featured <ArrowRight size={15} />
             </a>
@@ -53,6 +56,12 @@ export default function Nav() {
           <div className="mm-title">Home</div>
           <Link href="/" onClick={() => setOpen(false)}>
             StoryBizz Home
+          </Link>
+        </div>
+        <div className="mm-group">
+          <div className="mm-title">Free tool</div>
+          <Link href={DRAFT_LINK[1]} className={cur(DRAFT_LINK[1])} onClick={() => setOpen(false)}>
+            {DRAFT_LINK[0]}
           </Link>
         </div>
         {NAV_GROUPS.map(([title, items]) => (

@@ -6,11 +6,20 @@ import { NAV_GROUPS } from "@/lib/nav";
 interface FooterProps {
   ctaTitleHtml?: string;
   ctaLede?: string;
+  /* Pages that end on a line rather than a CTA (The Draft) swap the closing
+     block for a pull-quote — see storybizz-site.js's `closingQuote`. */
+  closingQuote?: { textHtml: string; cite?: string };
 }
 
-export default function Footer({ ctaTitleHtml, ctaLede }: FooterProps) {
+export default function Footer({ ctaTitleHtml, ctaLede, closingQuote }: FooterProps) {
   return (
     <footer className="on-ink" data-screen-label="Footer CTA">
+      {closingQuote ? (
+        <div className="closing closing-quote">
+          <blockquote className="editorial" dangerouslySetInnerHTML={{ __html: closingQuote.textHtml }} />
+          {closingQuote.cite && <cite>{closingQuote.cite}</cite>}
+        </div>
+      ) : (
       <div className="closing">
         <div className="eyebrow reveal">Apply now</div>
         <h2
@@ -29,6 +38,7 @@ export default function Footer({ ctaTitleHtml, ctaLede }: FooterProps) {
           </a>
         </div>
       </div>
+      )}
       <div className="footer">
         <div className="wrap">
           <div className="footer-grid">

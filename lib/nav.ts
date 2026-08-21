@@ -1,3 +1,5 @@
+export const DRAFT_LINK: [string, string] = ["The Draft", "/the-draft"];
+
 export const NAV_GROUPS: [string, [string, string][]][] = [
   [
     "Services",
