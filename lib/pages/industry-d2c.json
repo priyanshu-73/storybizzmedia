@@ -6,11 +6,54 @@
     "titleHtml": "Turn a brand people buy into a brand <span class=\"em\">people talk about.</span>",
     "lede": "For consumer brands, founder stories, product coverage and social publicity that lower acquisition costs by making your name pre-trusted before the ad click.",
     "shot": "/uploads/0 (1).png",
+    "shotAr": "1316/1182",
     "shotTag": "Client brand coverage"
   },
   "sections": [
     {
       "type": "logoband"
+    },
+    {
+      "type": "proofwall",
+      "eyebrow": "Proof of work",
+      "titleHtml": "Real brands. Real coverage, <span class=\"em\">real first pages.</span>",
+      "items": [
+        {
+          "src": "/assets/D2C/d2c-press-karlsson-moneycontrol.png",
+          "cap": "Anna-Karin Karlsson · Moneycontrol",
+          "ar": "913/1164"
+        },
+        {
+          "src": "/assets/D2C/d2c-press-stateofjoy-theprint.png",
+          "cap": "State of Joy · ThePrint, ANI wire feature",
+          "ar": "1200/1130"
+        },
+        {
+          "src": "/assets/D2C/d2c-press-soulflower-vccircle.png",
+          "cap": "Soulflower · VCCircle",
+          "ar": "1200/809"
+        },
+        {
+          "src": "/assets/D2C/d2c-press-studdmuffyn-theprint.png",
+          "cap": "Studd Muffyn Life · ThePrint, ANI wire feature",
+          "ar": "1200/1028"
+        },
+        {
+          "src": "/assets/D2C/d2c-press-ringke-toi.png",
+          "cap": "Ringke · The Times of India",
+          "ar": "1122/670"
+        },
+        {
+          "src": "/assets/D2C/d2c-press-bluetokai-thehindu.png",
+          "cap": "Blue Tokai · The Hindu",
+          "ar": "1200/1185"
+        },
+        {
+          "src": "/assets/D2C/d2c-press-justdial-moneycontrol.png",
+          "cap": "Just Dial · Moneycontrol",
+          "ar": "1200/1086"
+        }
+      ]
     },
     {
       "type": "pains",
@@ -54,7 +97,7 @@
         {
           "ph": "Brand story screenshot",
           "src": "/assets/case-yoho.png",
-          "ar": "4/5"
+          "ar": "1258/1510"
         }
       ]
     },

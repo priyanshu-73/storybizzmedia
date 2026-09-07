@@ -1293,7 +1293,7 @@ body:has(.pr-modal.open) #wa-float { display: none !important; }
 .hero-proof .hp-card { border-radius: 14px; overflow: hidden; border: 1px solid var(--border-subtle, #EDE9E4); box-shadow: 0 40px 80px -40px rgba(20,18,17,0.5); background: #fff; transform: rotate(1.6deg); }
 .hero-proof .hp-card .image-slot { display: block; width: 100%; height: auto; aspect-ratio: var(--ar, 4/4.4); }
 .hero-proof .hp-tag {
-  position: absolute; left: -12px; bottom: 22px; z-index: 2;
+  position: absolute; left: 16px; bottom: 22px; z-index: 2;
   background: var(--ink); color: #fff; font-size: 12.5px; font-weight: 600; letter-spacing: 0.02em;
   padding: 9px 14px; border-radius: 999px; display: inline-flex; align-items: center; gap: 8px;
   box-shadow: 0 16px 36px -14px rgba(0,0,0,0.5);
@@ -1357,6 +1357,7 @@ body:has(.pr-modal.open) #wa-float { display: none !important; }
 .rel-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 48px; }
 .rel-card {
   display: block; border: 1px solid var(--border-subtle, #EDE9E4); background: #fff; border-radius: 14px; padding: 24px;
+  text-decoration: none;
   transition: border-color .15s ease, transform .15s ease, box-shadow .15s ease;
 }
 .rel-card:hover { border-color: var(--brand); transform: translateY(-2px); box-shadow: 0 20px 40px -28px rgba(20,18,17,0.4); }

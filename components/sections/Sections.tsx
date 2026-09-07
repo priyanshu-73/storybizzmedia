@@ -740,7 +740,7 @@ export default function Section({ s }: { s: PageSection }) {
               {s.items.map((p: any, k: number) => (
                 <div className="pw-item reveal" key={k} style={delay(k, 0.05)}>
                   <div className="pg-shot" style={p.ar ? ({ "--ar": p.ar } as React.CSSProperties) : undefined}>
-                    <ImageSlot src={p.src} placeholder={p.ph || "Proof"} position={p.src ? "50% 0%" : undefined} style={{ height: "100%" }} />
+                    <ImageSlot src={p.src} fit="contain" placeholder={p.ph || "Proof"} style={{ height: "100%" }} />
                   </div>
                   <div className="pw-cap">{p.cap}</div>
                 </div>
