@@ -7,5 +7,12 @@ services:
     image: storybizz-next:latest
     container_name: storybizz-next
     restart: unless-stopped
+    # ANTHROPIC_API_KEY lives here, not in the build: The Draft reads it per
+    # request, so it has to be in the container's runtime env. Without it
+    # /api/draft answers 503 and the form shows "The Draft isn't switched on yet".
+    # .env.local is gitignored and excluded from the build context — copy
+    # .env.example to .env.local on the host before `docker compose up`.
+    env_file:
+      - .env.local
     ports:
       - "3001:3000"

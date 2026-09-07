@@ -137,18 +137,28 @@ export async function POST(request: Request) {
      both system prompts say so explicitly. */
   const brief = JSON.stringify(form);
 
+  /* Current models think by default and thinking is billed against max_tokens,
+     so a cap sized for the article alone gets spent reasoning and comes back
+     with no text block at all. Both calls get headroom, and reasoning is kept
+     shallow: these prompts fill a fixed contract rather than solve anything.
+     Haiku predates output_config and rejects it. */
+  const supportsEffort = (model: string) => !model.includes("haiku");
+
   const complete = async (model: string, system: string, user: string, maxTokens: number) => {
     const message = await client.messages.create({
       model,
       max_tokens: maxTokens,
+      ...(supportsEffort(model) ? { output_config: { effort: "low" as const } } : {}),
       system,
       messages: [{ role: "user", content: user }],
     });
-    return textOf(message);
+    const text = textOf(message);
+    if (!text) console.warn(`[the-draft] ${model} returned no text (stop_reason: ${message.stop_reason})`);
+    return text;
   };
 
   try {
-    const gate = parseJSON<Gate>(await complete(GATEKEEPER_MODEL, GATEKEEPER + GATEKEEPER_POLICY, brief, 400));
+    const gate = parseJSON<Gate>(await complete(GATEKEEPER_MODEL, GATEKEEPER + GATEKEEPER_POLICY, brief, 2000));
     /* A gatekeeper that fails to answer must not cost the visitor their article. */
     const verdict = gate ?? { allow: true };
     const blocked = verdict.allow === false ? REFUSALS[verdict.reject_category ?? ""] : undefined;
@@ -176,16 +186,22 @@ export async function POST(request: Request) {
 
 Your previous draft was rejected by the sub-editor for: ${attempts[attempts.length - 1].failure}. Fix exactly that.` : "";
       const draft = parseJSON<DraftArticle>(
-        await complete(NEWSROOM_MODEL, NEWSROOM + GROUNDING_RULES + note, newsroomBrief, 2000),
+        await complete(NEWSROOM_MODEL, NEWSROOM + GROUNDING_RULES + note, newsroomBrief, 8000),
       );
-      if (!draft) continue;
+      if (!draft) {
+        console.warn(`[the-draft] pass ${pass} came back unparseable`);
+        continue;
+      }
       const failure = qaFail(draft, submitted);
       attempts.push({ article: draft, failure });
       if (!failure) break;
       console.warn(`[the-draft] QA rejected pass ${pass} (${failure})`);
     }
 
-    if (!attempts.length) return reply(502, { ok: false, reason: SNAG });
+    if (!attempts.length) {
+      console.error(`[the-draft] no usable draft after 3 passes from ${NEWSROOM_MODEL}`);
+      return reply(502, { ok: false, reason: SNAG });
+    }
 
     /* prefer clean, then merely stylistic failures, and only then a draft whose
        figures we could not trace — never send the visitor away empty-handed */
