@@ -13,6 +13,11 @@ FROM base AS builder
 WORKDIR /app
 ARG NEXT_PUBLIC_SITE_URL
 ENV NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL
+# Cloudinary cloud name is inlined into the client bundle at build time
+# (lib/assets.ts). Without it, image URLs fall back to /assets paths that no
+# longer exist. Passed through docker-compose.yml build args.
+ARG NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME
+ENV NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=$NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 RUN npm run build

@@ -4,6 +4,9 @@ services:
       context: .
       args:
         NEXT_PUBLIC_SITE_URL: https://storybizzmedia.com
+        # Inlined into the client bundle at build time (image URLs). Public
+        # identifier — it appears in every delivered image URL.
+        NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: rl9w93xo
     image: storybizz-next:latest
     container_name: storybizz-next
     restart: unless-stopped
