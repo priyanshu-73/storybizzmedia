@@ -5,12 +5,56 @@
     "crumb": "Industries / <b>Doctors &amp; Healthcare</b>",
     "titleHtml": "Patients choose the doctor <span class=\"em\">they can verify.</span>",
     "lede": "For doctors, clinics and hospitals, practitioner profiles, expert commentary and health features that make patients confident before the first consultation.",
+    "shot": "/assets/Healthcare/healthcare-press-devishetty-deccanherald.png",
+    "shotAr": "1199/836",
     "shotPh": "Doctor feature / health article",
     "shotTag": "Client health feature"
   },
   "sections": [
     {
       "type": "logoband"
+    },
+    {
+      "type": "proofwall",
+      "eyebrow": "Proof of work",
+      "titleHtml": "Real practitioners. Real coverage, <span class=\"em\">real first pages.</span>",
+      "items": [
+        {
+          "src": "/assets/Healthcare/healthcare-press-richagangwar-republic.png",
+          "cap": "Dr. Richa Gangwar · Republic World",
+          "ar": "990/1186"
+        },
+        {
+          "src": "/assets/Healthcare/healthcare-press-handaaesthetics-ani.png",
+          "cap": "Handa Aesthetics · ANI",
+          "ar": "867/1200"
+        },
+        {
+          "src": "/assets/Healthcare/healthcare-press-aestiva-businessstandard.png",
+          "cap": "Aestiva Plastic Surgery · Business Standard",
+          "ar": "1/1"
+        },
+        {
+          "src": "/assets/Healthcare/healthcare-press-devishetty-deccanherald.png",
+          "cap": "Dr. Devi Prasad Shetty · Deccan Herald",
+          "ar": "1199/836"
+        },
+        {
+          "src": "/assets/Healthcare/healthcare-press-endometriosis-toi.png",
+          "cap": "Endometriosis Care · The Times of India",
+          "ar": "1173/1142"
+        },
+        {
+          "src": "/assets/Healthcare/healthcare-press-finesseaesthetic-ahmedabadmirror.png",
+          "cap": "Finesse Aesthetic · Ahmedabad Mirror",
+          "ar": "1200/1171"
+        },
+        {
+          "src": "/assets/Healthcare/healthcare-press-akankshapandey-entrepreneur.png",
+          "cap": "Akanksha Pandey · Entrepreneur India",
+          "ar": "1200/1034"
+        }
+      ]
     },
     {
       "type": "pains",
@@ -53,7 +97,8 @@
       "slots": [
         {
           "ph": "Health feature screenshot",
-          "ar": "4/5"
+          "src": "/assets/Healthcare/healthcare-press-richagangwar-republic.png",
+          "ar": "990/1186"
         }
       ]
     },

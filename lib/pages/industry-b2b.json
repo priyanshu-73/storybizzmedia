@@ -5,12 +5,55 @@
     "crumb": "Industries / <b>B2B Companies</b>",
     "titleHtml": "Win the deal before <span class=\"em\">the first call.</span>",
     "lede": "For B2B companies and services firms, executive authority and business-media coverage that survive procurement, shorten sales cycles and give your champion something to forward internally.",
-    "shot": "/uploads/Screenshot 2025-10-24 at 3.30.25 AM.png",
+    "shot": "/assets/B2B/b2b-press-1point1-techcircle.png",
+    "shotAr": "1200/910",
     "shotTag": "Client business coverage"
   },
   "sections": [
     {
       "type": "logoband"
+    },
+    {
+      "type": "proofwall",
+      "eyebrow": "Proof of work",
+      "titleHtml": "Real companies. Real coverage, <span class=\"em\">real first pages.</span>",
+      "items": [
+        {
+          "src": "/assets/B2B/b2b-press-oswalcables-fortuneindia.png",
+          "cap": "Oswal Cables · Fortune India",
+          "ar": "1727/2271"
+        },
+        {
+          "src": "/assets/B2B/b2b-press-prasinos-indiadotcom.png",
+          "cap": "Prasinos Tech Innovations · India.com",
+          "ar": "1200/1189"
+        },
+        {
+          "src": "/assets/B2B/b2b-press-lsimech-zeenews.png",
+          "cap": "LSI-MECH Engineers · Zee News",
+          "ar": "1200/1162"
+        },
+        {
+          "src": "/assets/B2B/b2b-press-greenhydrogen-moneycontrol.png",
+          "cap": "Green Hydrogen Mission · Moneycontrol",
+          "ar": "1200/1065"
+        },
+        {
+          "src": "/assets/B2B/b2b-press-1point1-techcircle.png",
+          "cap": "1Point1 Solutions · TechCircle",
+          "ar": "1200/910"
+        },
+        {
+          "src": "/assets/B2B/b2b-press-indiamart-etretail.png",
+          "cap": "IndiaMART · ETRetail, The Economic Times",
+          "ar": "1200/1148"
+        },
+        {
+          "src": "/assets/B2B/b2b-press-deodap-midday.png",
+          "cap": "DeoDap · Mid-Day",
+          "ar": "1087/1170"
+        }
+      ]
     },
     {
       "type": "pains",
@@ -53,7 +96,8 @@
       "slots": [
         {
           "ph": "B2B coverage screenshot",
-          "ar": "4/5"
+          "src": "/assets/B2B/b2b-press-indiamart-etretail.png",
+          "ar": "1200/1148"
         }
       ]
     },
