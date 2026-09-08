@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import ImageSlot from "@/components/ImageSlot";
 import Section from "@/components/sections/Sections";
+import { assetUrl } from "@/lib/assets";
 import type { PageConfig } from "@/lib/types";
 
 const d = (v: string) => ({ "--d": v } as React.CSSProperties);
@@ -41,7 +42,7 @@ function PageHero({ page }: { page: PageConfig }) {
   if (hero.floats) {
     return (
       <header className="hero on-ink press-hero" data-screen-label="Page hero">
-        <div className="hero-bg" />
+        <div className="hero-bg" style={{ backgroundImage: `url(${assetUrl("/assets/hero-studio.jpg")})` }} />
         <div className="hero-glow g1" />
         <div className="hero-glow g2" />
         {hero.floats.slice(0, 8).map((f, i) => (

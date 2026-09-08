@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import ImageSlot from "@/components/ImageSlot";
 import Footer from "@/components/Footer";
+import { assetUrl } from "@/lib/assets";
 
 const d = (v: string) => ({ "--d": v } as React.CSSProperties);
 
@@ -128,7 +129,7 @@ export default function Home() {
     <>
       {/* ============ HERO ============ */}
       <header className="hero on-ink" data-screen-label="Hero">
-        <div className="hero-bg" />
+        <div className="hero-bg" style={{ backgroundImage: `url(${assetUrl("/assets/hero-studio.jpg")})` }} />
         <div className="hero-glow g1" />
         <div className="hero-glow g2" />
 
@@ -215,7 +216,7 @@ export default function Home() {
           <div className="marquee-track">
             {PRESS_MARQUEE.map(([file, alt, h]) => (
               <span key={file} style={{ display: "contents" }}>
-                <img className="press-logo" src={`/assets/press/${file}.png`} alt={alt} style={{ height: h }} />
+                <img className="press-logo" src={assetUrl(`/assets/press/${file}.png`)} alt={alt} style={{ height: h }} />
                 <span className="press-slash">/</span>
               </span>
             ))}
@@ -297,14 +298,14 @@ export default function Home() {
             </p>
             <div className="coreline">Get published where Google, and people, are looking.</div>
             <div className="logo-wall">
-              <img className="press-logo" src="/assets/press/toi.png" alt="The Times of India" style={{ height: 20 }} />
-              <img className="press-logo" src="/assets/press/economic-times.png" alt="The Economic Times" style={{ height: 17 }} />
-              <img className="press-logo" src="/assets/press/hindustan-times.png" alt="Hindustan Times" style={{ height: 26 }} />
-              <img className="press-logo" src="/assets/press/the-hindu.png" alt="The Hindu" style={{ height: 24 }} />
-              <img className="press-logo" src="/assets/press/theprint.png" alt="ThePrint" style={{ height: 16 }} />
-              <img className="press-logo" src="/assets/press/moneycontrol.png" alt="Moneycontrol" style={{ height: 18 }} />
-              <img className="press-logo" src="/assets/press/yourstory.png" alt="YourStory" style={{ height: 15 }} />
-              <img className="press-logo" src="/assets/press/midday.png" alt="Mid-Day" style={{ height: 20 }} />
+              <img className="press-logo" src={assetUrl("/assets/press/toi.png")} alt="The Times of India" style={{ height: 20 }} />
+              <img className="press-logo" src={assetUrl("/assets/press/economic-times.png")} alt="The Economic Times" style={{ height: 17 }} />
+              <img className="press-logo" src={assetUrl("/assets/press/hindustan-times.png")} alt="Hindustan Times" style={{ height: 26 }} />
+              <img className="press-logo" src={assetUrl("/assets/press/the-hindu.png")} alt="The Hindu" style={{ height: 24 }} />
+              <img className="press-logo" src={assetUrl("/assets/press/theprint.png")} alt="ThePrint" style={{ height: 16 }} />
+              <img className="press-logo" src={assetUrl("/assets/press/moneycontrol.png")} alt="Moneycontrol" style={{ height: 18 }} />
+              <img className="press-logo" src={assetUrl("/assets/press/yourstory.png")} alt="YourStory" style={{ height: 15 }} />
+              <img className="press-logo" src={assetUrl("/assets/press/midday.png")} alt="Mid-Day" style={{ height: 20 }} />
               <span className="wall-more">+200 more</span>
             </div>
           </div>
@@ -312,7 +313,7 @@ export default function Home() {
             <div className="stack-cards plx" data-plx="18">
               <div className="stack-card">
                 <div className="kicker">
-                  <img className="outlet-logo" src="/assets/press/economic-times.png" alt="The Economic Times" style={{ height: 15 }} />
+                  <img className="outlet-logo" src={assetUrl("/assets/press/economic-times.png")} alt="The Economic Times" style={{ height: 15 }} />
                   <span className="tag">Published</span>
                 </div>
                 <div className="headline">Bengaluru startup raises $4M to expand across South-East Asia</div>
@@ -320,7 +321,7 @@ export default function Home() {
               </div>
               <div className="stack-card" style={{ marginLeft: 32 }}>
                 <div className="kicker">
-                  <img className="outlet-logo" src="/assets/press/yourstory.png" alt="YourStory" style={{ height: 13 }} />
+                  <img className="outlet-logo" src={assetUrl("/assets/press/yourstory.png")} alt="YourStory" style={{ height: 13 }} />
                   <span className="tag">Published</span>
                 </div>
                 <div className="headline">Founder-led D2C brand crosses 1 million customers milestone</div>
@@ -328,7 +329,7 @@ export default function Home() {
               </div>
               <div className="stack-card">
                 <div className="kicker">
-                  <img className="outlet-logo" src="/assets/press/hindustan-times.png" alt="Hindustan Times" style={{ height: 22 }} />
+                  <img className="outlet-logo" src={assetUrl("/assets/press/hindustan-times.png")} alt="Hindustan Times" style={{ height: 22 }} />
                   <span className="tag">Published</span>
                 </div>
                 <div className="headline">Funding story: investors back founder&apos;s vision for the category</div>
@@ -522,11 +523,11 @@ export default function Home() {
                 <div className="svc-title">500+ distribution channels</div>
                 <p>Tell us your story, we&apos;ll map the right mix for your goals.</p>
                 <div className="logo-wall logo-wall-sm">
-                  <img className="press-logo" src="/assets/press/zee-news.png" alt="Zee News" style={{ height: 18 }} />
-                  <img className="press-logo" src="/assets/press/republic.png" alt="Republic" style={{ height: 13 }} />
-                  <img className="press-logo" src="/assets/press/tribune.png" alt="The Tribune" style={{ height: 18 }} />
-                  <img className="press-logo" src="/assets/press/vccircle.png" alt="VCCircle" style={{ height: 14 }} />
-                  <img className="press-logo" src="/assets/press/techcircle.png" alt="TechCircle" style={{ height: 14 }} />
+                  <img className="press-logo" src={assetUrl("/assets/press/zee-news.png")} alt="Zee News" style={{ height: 18 }} />
+                  <img className="press-logo" src={assetUrl("/assets/press/republic.png")} alt="Republic" style={{ height: 13 }} />
+                  <img className="press-logo" src={assetUrl("/assets/press/tribune.png")} alt="The Tribune" style={{ height: 18 }} />
+                  <img className="press-logo" src={assetUrl("/assets/press/vccircle.png")} alt="VCCircle" style={{ height: 14 }} />
+                  <img className="press-logo" src={assetUrl("/assets/press/techcircle.png")} alt="TechCircle" style={{ height: 14 }} />
                 </div>
                 <a href="#getstarted" className="btn btn-cta-white btn-sm" style={{ marginTop: 18 }}>
                   Get Featured <ArrowRight size={15} />
@@ -549,7 +550,7 @@ export default function Home() {
           <div className="client-grid reveal" style={d(".14s")}>
             {CLIENTS.map(([file, name, style]) => (
               <div className="client-tile" key={file}>
-                <img src={`/assets/clients/${file}`} alt={name} style={style} loading="lazy" />
+                <img src={assetUrl(`/assets/clients/${file}`)} alt={name} style={style} loading="lazy" />
               </div>
             ))}
             <div className="client-tile client-more">
@@ -589,7 +590,7 @@ export default function Home() {
           <div className="case-study reveal" data-screen-label="Case Study Klip">
             <div className="case-copy">
               <div className="case-brand">
-                <img className="case-logo" src="/assets/clients/klip.jpeg" alt="Klip Entertainment" />
+                <img className="case-logo" src={assetUrl("/assets/clients/klip.jpeg")} alt="Klip Entertainment" />
                 <div>
                   <div className="case-tag">Case Study · 01</div>
                   <div className="case-name">Klip Entertainment</div>
@@ -616,7 +617,7 @@ export default function Home() {
             </div>
             <div className="case-shot">
               <div className="case-shot-frame">
-                <img src="/assets/case-klip-serp.png" alt="Google results for klip entertainment, Times of India, Mint, afaqs!, ANI News" loading="lazy" />
+                <img src={assetUrl("/assets/case-klip-serp.png")} alt="Google results for klip entertainment, Times of India, Mint, afaqs!, ANI News" loading="lazy" />
               </div>
             </div>
           </div>
@@ -624,7 +625,7 @@ export default function Home() {
           <div className="case-study rev reveal" data-screen-label="Case Study Blinkit AI">
             <div className="case-copy">
               <div className="case-brand">
-                <img className="case-logo" src="/assets/clients/blinkit-ai.png" alt="Blinkit AI" style={{ objectFit: "contain", padding: "12px 8px", background: "#131217" }} />
+                <img className="case-logo" src={assetUrl("/assets/clients/blinkit-ai.png")} alt="Blinkit AI" style={{ objectFit: "contain", padding: "12px 8px", background: "#131217" }} />
                 <div>
                   <div className="case-tag">Case Study · 02</div>
                   <div className="case-name">Blinkit AI</div>
@@ -655,7 +656,7 @@ export default function Home() {
             </div>
             <div className="case-shot">
               <div className="case-shot-frame">
-                <img src="/assets/case-blinkit-serp.png" alt="Google results for blinkit ai funding, YourStory, VCCircle, Business Standard, Times of India" loading="lazy" />
+                <img src={assetUrl("/assets/case-blinkit-serp.png")} alt="Google results for blinkit ai funding, YourStory, VCCircle, Business Standard, Times of India" loading="lazy" />
               </div>
             </div>
           </div>
@@ -663,7 +664,7 @@ export default function Home() {
           <div className="case-study reveal" data-screen-label="Case Study Conbun">
             <div className="case-copy">
               <div className="case-brand">
-                <img className="case-logo" src="/assets/clients/conbun.png" alt="Conbun" style={{ objectFit: "contain", padding: 10, background: "#fff" }} />
+                <img className="case-logo" src={assetUrl("/assets/clients/conbun.png")} alt="Conbun" style={{ objectFit: "contain", padding: 10, background: "#fff" }} />
                 <div>
                   <div className="case-tag">Case Study · 03</div>
                   <div className="case-name">Conbun</div>
@@ -685,7 +686,7 @@ export default function Home() {
             </div>
             <div className="case-shot">
               <div className="case-shot-frame">
-                <img src="/assets/case-conbun-forbes.png" alt="Forbes India feature, How Conbun is digitizing everyday expertise and getting India hooked" loading="lazy" />
+                <img src={assetUrl("/assets/case-conbun-forbes.png")} alt="Forbes India feature, How Conbun is digitizing everyday expertise and getting India hooked" loading="lazy" />
               </div>
             </div>
           </div>
@@ -709,7 +710,7 @@ export default function Home() {
                   <span className="dot" />
                   <span className="dot" />
                 </div>
-                <img src={src} alt={alt} />
+                <img src={assetUrl(src)} alt={alt} />
               </div>
             ))}
           </div>
@@ -723,7 +724,7 @@ export default function Home() {
                   <span className="dot" />
                   <span className="dot" />
                 </div>
-                <img src={src} alt={alt} />
+                <img src={assetUrl(src)} alt={alt} />
               </div>
             ))}
           </div>

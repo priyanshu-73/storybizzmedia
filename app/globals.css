@@ -401,7 +401,10 @@ a { color: inherit; }
 .hero { background: var(--ink); color: #fff; position: relative; overflow: hidden; }
 .hero-bg {
   position: absolute; inset: 0; z-index: 0;
-  background: url('/assets/hero-studio.jpg') center 30% / cover no-repeat;
+  /* background-image is set inline where .hero-bg is rendered (Cloudinary URL) */
+  background-position: center 30%;
+  background-size: cover;
+  background-repeat: no-repeat;
   opacity: 0.42;
 }
 .hero-bg::after {

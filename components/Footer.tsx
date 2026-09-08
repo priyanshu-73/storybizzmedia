@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { NAV_GROUPS } from "@/lib/nav";
+import { assetUrl } from "@/lib/assets";
 
 interface FooterProps {
   ctaTitleHtml?: string;
@@ -43,7 +44,7 @@ export default function Footer({ ctaTitleHtml, ctaLede, closingQuote }: FooterPr
         <div className="wrap">
           <div className="footer-grid">
             <div className="footer-col footer-brand">
-              <Image src="/assets/logo-wordmark-white.png" alt="StoryBizz" width={132} height={24} style={{ height: 24, width: "auto" }} />
+              <Image src={assetUrl("/assets/logo-wordmark-white.png")} alt="StoryBizz" width={132} height={24} style={{ height: 24, width: "auto" }} />
               <p>
                 The media visibility partner. We help brands, founders and professionals get visible where people decide
                 who to trust.

@@ -1,4 +1,5 @@
 import type { DraftArticle } from "@/lib/draft-types";
+import { assetUrl } from "@/lib/assets";
 
 /* Canvas share cards for The Draft (1080×1350 post, 1080×1920 story), ported
    from the prototype's renderShareImage. Font families are read off the CSS
@@ -146,7 +147,7 @@ export async function renderShareImage(article: DraftArticle, photoData: string 
   x.fillRect(0, H * 0.38, W, H * 0.62);
 
   /* logo + "The Draft", top-left */
-  const logo = await loadImg("/assets/logo-wordmark-white.png");
+  const logo = await loadImg(assetUrl("/assets/logo-wordmark-white.png"));
   let logoBottom = 118;
   if (logo && logo.width) {
     const lw = 236;

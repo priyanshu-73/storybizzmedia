@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
 import ImageSlot from "@/components/ImageSlot";
 import LucideIcon from "@/components/LucideIcon";
+import { assetUrl } from "@/lib/assets";
 import type { PageSection } from "@/lib/types";
 import CasesSection from "./CasesSection";
 import PubDirectory from "./PubDirectory";
@@ -32,7 +33,7 @@ export function LogoWall() {
     <div className="logo-wall">
       {logos.map(([file, alt, h]) => (
         // eslint-disable-next-line @next/next/no-img-element
-        <img key={file} className="press-logo" src={`/assets/press/${file}.png`} alt={alt} style={{ height: h }} loading="lazy" />
+        <img key={file} className="press-logo" src={assetUrl(`/assets/press/${file}.png`)} alt={alt} style={{ height: h }} loading="lazy" />
       ))}
       <span className="wall-more">+200 more</span>
     </div>
@@ -373,7 +374,7 @@ export default function Section({ s }: { s: PageSection }) {
               {s.items.map((it: any, k: number) => (
                 <div className="client-tile" key={k}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={it.src} alt={it.name} loading="lazy" style={it.style ? undefined : undefined} />
+                  <img src={assetUrl(it.src)} alt={it.name} loading="lazy" style={it.style ? undefined : undefined} />
                 </div>
               ))}
               {s.more && (
@@ -594,7 +595,7 @@ export default function Section({ s }: { s: PageSection }) {
               {outlets.map(([file, name, h]) => (
                 <div className="outlet-card" key={file}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={`/assets/press/${file}.png`} alt={name} style={{ height: h }} loading="lazy" />
+                  <img src={assetUrl(`/assets/press/${file}.png`)} alt={name} style={{ height: h }} loading="lazy" />
                   <div className="oc-name">{name}</div>
                 </div>
               ))}
@@ -624,7 +625,7 @@ export default function Section({ s }: { s: PageSection }) {
                   <div className="dist-logos">
                     {g.logos.map((o: [string, string, number], i: number) => (
                       // eslint-disable-next-line @next/next/no-img-element
-                      <img key={i} className="press-logo" src={`/assets/press/${o[0]}.png`} alt={o[1]} style={{ height: o[2] }} loading="lazy" />
+                      <img key={i} className="press-logo" src={assetUrl(`/assets/press/${o[0]}.png`)} alt={o[1]} style={{ height: o[2] }} loading="lazy" />
                     ))}
                     <span className="dist-more">+ {g.more || "40"} more</span>
                   </div>

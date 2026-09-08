@@ -8,6 +8,7 @@ import { DELIVERABLES, HOW_STEPS, INDUSTRIES, LOAD_MSGS, PRESS_LOGOS, SAMPLES } 
 import { postLead } from "@/lib/leads";
 import { EMAIL_ERROR, isValidEmail, isValidPhone, PHONE_ERROR } from "@/lib/validate";
 import { renderShareImage } from "@/lib/draft-share";
+import { assetUrl } from "@/lib/assets";
 import type { DraftArticle, DraftContact, DraftFormValues, DraftResponse } from "@/lib/draft-types";
 
 /* The Draft — free PR-article generator, ported from the-draft.js.
@@ -39,7 +40,7 @@ const PressLogos = ({ count }: { count?: number }) => (
     {PRESS_LOGOS.slice(0, count ?? PRESS_LOGOS.length).map((f) => (
       <img
         key={f}
-        src={`/assets/press/${f}.png`}
+        src={assetUrl(`/assets/press/${f}.png`)}
         alt=""
         loading="lazy"
         onError={(e) => {

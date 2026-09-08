@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { assetUrl } from "@/lib/assets";
 
 const CATS: [string, string][] = [
   ["all", "All"],
@@ -64,7 +65,7 @@ export default function PubDirectory() {
             <div className="pc-logo">
               {logo ? (
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src={logo} alt={name} loading="lazy" />
+                <img src={assetUrl(logo)} alt={name} loading="lazy" />
               ) : (
                 <span className="pc-word">{name}</span>
               )}

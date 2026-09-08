@@ -1,4 +1,5 @@
 import type { CSSProperties } from "react";
+import { assetUrl } from "@/lib/assets";
 
 interface ImageSlotProps {
   src?: string;
@@ -40,7 +41,7 @@ export default function ImageSlot({
       {src ? (
         // eslint-disable-next-line @next/next/no-img-element
         <img
-          src={src}
+          src={assetUrl(src)}
           alt={alt ?? placeholder}
           loading="lazy"
           style={position ? { objectPosition: position } : undefined}

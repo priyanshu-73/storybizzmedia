@@ -6,6 +6,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { ArrowRight, ChevronDown, Menu, X } from "lucide-react";
 import { DRAFT_LINK, NAV_GROUPS } from "@/lib/nav";
+import { assetUrl } from "@/lib/assets";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
@@ -17,7 +18,7 @@ export default function Nav() {
       <div className="nav" data-screen-label="Nav">
         <div className="nav-inner">
           <Link href="/" style={{ display: "inline-flex" }}>
-            <Image src="/assets/logo-wordmark-white.png" alt="StoryBizz" width={132} height={24} priority style={{ height: 24, width: "auto" }} />
+            <Image src={assetUrl("/assets/logo-wordmark-white.png")} alt="StoryBizz" width={132} height={24} priority style={{ height: 24, width: "auto" }} />
           </Link>
           <nav className="nav-links">
             {NAV_GROUPS.map(([title, items]) => (
